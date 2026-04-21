@@ -1,17 +1,11 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
+import Layout from "./components/Header/Header";
+// import Main from "./components/Main/Main"; // если нужно, добавь внутрь Layout
 
-import {Main} from './components/Main/Main';
-
-import './App.css';
-
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
-      <nav>
-        <Link>Main</Link>
-      </nav>
+      <Layout />
     </BrowserRouter>
   );
 }
-
-export default App;
