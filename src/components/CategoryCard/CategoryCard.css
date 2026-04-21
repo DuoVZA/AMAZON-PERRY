@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.CategoryCard {
+    background-color: #F4FAFF;
+    box-shadow: 0px 4px 11.5px -5px #2050AD40;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.CategoryCard>#seeAll {
+    display: flex;
+    flex-direction: row;    
+   justify-content: flex-end;
+   align-items: center;
+}
+
+.CategoryCard>#information {
+    display: flex;
+    flex-direction: column;
+}
+
+.CategoryCard p {
+    /* Multi-line text truncation */
+    overflow: hidden;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+
+    font-family: Mulish;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 2%;
+    height: 56px;
+    margin: 8px 0;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+    .CategoryCard {
+        width: 171px;
+        height: 197px;
+        border-radius: 4px;
+        padding: 14px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .CategoryCard {
+        width: 239px;
+        height: 264px;
+        border-radius: 8px;
+        padding: 16px;
+    }
+}
