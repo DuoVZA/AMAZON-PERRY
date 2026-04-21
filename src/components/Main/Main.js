@@ -4,10 +4,8 @@ import './Main.css';
 
 import {Header} from './ForMain/Header.js';
 
-const Main = () => (
-  <div>
-    Main Component
-  </div>
-);
+function Main() {
+  
+}
 
 export default Main;

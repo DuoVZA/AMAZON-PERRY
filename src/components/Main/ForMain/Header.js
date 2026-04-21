@@ -6,4 +6,4 @@ const Header = () => (
   </div>
 );
 
-export default Main;
+export default Header;
