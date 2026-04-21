@@ -1,9 +1,9 @@
 import './ProductCard.css';
 
-const ProductCard = () => (
-  <div className="ProductCard">
+export function ProductCard(props) {
+  return <div className="ProductCard">
     ProductCard Component
   </div>
-);
+}
 
 export default ProductCard;
