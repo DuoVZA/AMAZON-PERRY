@@ -1,7 +1,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 .header {
-  background: #4a7bd9;
+  background: rgba(74, 123, 217, 1);
   height: 64px;
   display: flex;
   justify-content: center;        /* оставил как у тебя было */
@@ -69,7 +69,7 @@
 }
 
 .search-btn {
-  background: #b8ea48;
+  background: rgba(184, 234, 72, 1);
   border: none;
   width: 56px;
   cursor: pointer;
@@ -93,125 +93,3 @@
 }
 
 .icon-btn:hover { background: rgba(255,255,255,0.15); }
-
-/* Overlay и Drawer — полностью оставил как было */
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: 200;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s;
-}
-
-.overlay.visible {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.drawer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 365px;
-  height: 100vh;
-  background: #ffffff;
-  z-index: 300;
-  transform: translateX(-100%);
-  transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
-  box-shadow: 4px 0 20px rgba(0,0,0,0.15);
-  display: flex;
-  flex-direction: column;
-}
-
-.drawer.open {
-  transform: translateX(0);
-}
-
-.drawer-profile {
-  padding: 24px 20px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  border-bottom: 1px solid #eee;
-}
-
-.avatar {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: #4a7bd9;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  flex-shrink: 0;
-}
-
-.avatar img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.profile-name {
-  font-weight: 700;
-  font-size: 17px;
-  color: #1a1a1a;
-}
-
-.profile-role {
-  font-size: 13px;
-  color: #666;
-  margin-top: 2px;
-}
-
-.drawer-nav {
-  flex: 1;
-  padding: 12px 0;
-}
-
-.nav-item {
-  width: 100%;
-  padding: 16px 24px;
-  border: none;
-  background: none;
-  text-align: left;
-  font-size: 16px;
-  color: #222;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  transition: background 0.2s;
-}
-
-.nav-item:hover {
-  background: #f5f7fa;
-}
-
-.drawer-footer {
-  border-top: 1px solid #eee;
-  padding: 12px 0;
-}
-
-.logout-btn {
-  width: 100%;
-  padding: 16px 24px;
-  border: none;
-  background: none;
-  color: #d9534f;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  transition: background 0.2s;
-}
-
-.logout-btn:hover {
-  background: #fff0f0;
-}
