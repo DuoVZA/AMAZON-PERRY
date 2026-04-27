@@ -1,1 +1,170 @@
-.ProductCard {}
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.noSale {
+    display: none;
+}
+
+.ProductCard-small {
+    font-family: Mulish;
+    letter-spacing: 2%;
+    text-align: center;
+    color: #0E2042;
+
+    background-color: #F4FAFF;
+    box-sizing: border-box;
+}
+
+.ProductCard-small #discount {
+    width: 64px;
+    height: 40px;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    z-index: 2;
+}
+
+.ProductCard-small #discount>img {
+    position: relative;
+    right: 5px;
+    top: -2px;
+    width: 115%;
+}
+
+.ProductCard-small #discount>p {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 14px;
+    line-height: 24px;
+
+    margin: 0;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    z-index: 3;
+}
+
+.ProductCard-small #information {
+    width: 193;
+    margin: 12px 0;
+}
+
+.ProductCard-small #information>p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+
+    overflow: hidden;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.ProductCard-small #information>#icons {
+    font-family: Mulish;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.ProductCard-small #information>#icons>span {
+    display: flex;
+    align-items: center;
+    margin: 0 7px;
+}
+
+.ProductCard-small #information>#icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.ProductCard-small #information>#icons p {
+    margin: 0;
+}
+
+.ProductCard-small #price {
+    display: flex;
+    justify-content: center;
+}
+
+.ProductCard-small #price p {
+    display: inline;
+}
+
+.ProductCard-small #price>#currentPrice {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    margin: 0;
+}
+
+.ProductCard-small #price #currentPriceCents {
+    font-weight: 650;
+    font-size: 12px;
+    line-height: 32px;
+    margin: 0;
+    vertical-align: super;
+    position: relative;
+    top: -2px;
+    left: 2px;
+}
+
+.ProductCard-small #price>#oldPrice {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 8px 0 0 8px;
+    text-decoration: line-through;
+    color: #0E204280;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+    .ProductCard-small {
+        width: 171px;
+        height: 270px;
+        border-radius: 4px;
+        padding: 14px;
+    }
+
+    .ProductCard-small #image {
+        position: relative;
+        width: 143px;
+        height: 143px;
+    }
+
+    .ProductCard-small #image>img {
+                width: 100%;
+
+        border-radius: 2px;
+    }
+
+}
+
+@media (min-width: 1025px) {
+    .ProductCard-small {
+        width: 225px;
+        height: 361px;
+        border-radius: 8px;
+        padding: 16px;
+    }
+
+    .ProductCard-small #image {
+        position: relative;
+        width: 193px;
+        height: 193px;
+    }
+
+    .ProductCard-small #image>img {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+}
+
+.ProductCard-big {}

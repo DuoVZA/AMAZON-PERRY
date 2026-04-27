@@ -5,8 +5,18 @@ import { CategoryCard } from "./components/CategoryCard/CategoryCard";
 function App() {
   return (
     <div className="App">
-      {/* <ProductCard img="./images/categories/Tools-for-leather-products-favorable-prices.png" name="Tools for leather products: favorable prices"/> */}
-      <CategoryCard img="./images/categories/Tools-for-leather-products-favorable-prices.png" name="Tools for leather products: favorable prices"/>
+      <ProductCard size="ProductCard-small" sale="sale" discount="-17%" img="./images/products/SOMALER-Womens-Cotton-Wide-Brim-Sun-Hat.png" name="SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel" stars="4" comments="1547" oldPrice="$14.20" price="18" priceCents="99"/>
+      <ProductCard size="ProductCard-small" sale="sale" discount="-17%" img="./images/products/SOMALER-Womens-Cotton-Wide-Brim-Sun-Hat.png" name="SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel" stars="4" comments="1547" oldPrice="$14.20" price="18" priceCents="99"/>
+      <ProductCard size="ProductCard-small" sale="noSale" img="./images/products/SOMALER-Womens-Cotton-Wide-Brim-Sun-Hat.png" name="SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel" stars="4" comments="1547" oldPrice="$14.20" price="18" priceCents="99"/>
+      <ProductCard size="ProductCard-small" sale="sale" discount="-17%" img="./images/products/SOMALER-Womens-Cotton-Wide-Brim-Sun-Hat.png" name="SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel" stars="4" comments="1547" oldPrice="$14.20" price="18" priceCents="99"/>
+      <ProductCard size="ProductCard-small" sale="sale" discount="-17%" img="./images/products/SOMALER-Womens-Cotton-Wide-Brim-Sun-Hat.png" name="SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel" stars="4" comments="1547" oldPrice="$14.20" price="18" priceCents="99"/>
+      <ProductCard size="ProductCard-small" sale="sale" discount="-17%" img="./images/products/SOMALER-Womens-Cotton-Wide-Brim-Sun-Hat.png" name="SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel" stars="4" comments="1547" oldPrice="$14.20" price="18" priceCents="99"/>
+      <ProductCard size="ProductCard-small" sale="sale" discount="-17%" img="./images/products/SOMALER-Womens-Cotton-Wide-Brim-Sun-Hat.png" name="SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel" stars="4" comments="1547" oldPrice="$14.20" price="18" priceCents="99"/>
+      <ProductCard size="ProductCard-small" sale="sale" discount="-17%" img="./images/products/SOMALER-Womens-Cotton-Wide-Brim-Sun-Hat.png" name="SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel" stars="4" comments="1547" oldPrice="$14.20" price="18" priceCents="99"/>
+      <ProductCard size="ProductCard-small" sale="sale" discount="-17%" img="./images/products/SOMALER-Womens-Cotton-Wide-Brim-Sun-Hat.png" name="SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel" stars="4" comments="1547" oldPrice="$14.20" price="18" priceCents="99"/>
+      <ProductCard size="ProductCard-small" sale="sale" discount="-17%" img="./images/products/SOMALER-Womens-Cotton-Wide-Brim-Sun-Hat.png" name="SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel" stars="4" comments="1547" oldPrice="$14.20" price="18" priceCents="99"/>
+      {/* <ProductCard size="ProductCard-big" img="./images/products/SOMALER-Womens-Cotton-Wide-Brim-Sun-Hat.png" name="Tools for leather products: favorable prices"/> */}
+      {/* <CategoryCard img="./images/categories/Tools-for-leather-products-favorable-prices.png" name="Tools for leather products: favorable prices"/> */}
     </div>
   );
 }
