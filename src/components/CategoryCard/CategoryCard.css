@@ -4,21 +4,34 @@
     background-color: #F4FAFF;
     box-shadow: 0px 4px 11.5px -5px #2050AD40;
     box-sizing: border-box;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.CategoryCard>p {
     font-family: Mulish;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
+
     letter-spacing: 2%;
-    height: 56px;
+}
+
+.CategoryCard>#seeAll {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.CategoryCard>#information {
+    display: flex;
+    flex-direction: column;
+}
+
+.CategoryCard p {
+    overflow: hidden;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {
@@ -28,6 +41,17 @@
         border-radius: 4px;
         padding: 14px;
     }
+
+    .CategoryCard p {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 4px 0;
+    }
+
+    .CategoryCard a {
+        font-size: 12px;
+        line-height: 16px;
+    }
 }
 
 @media (min-width: 1025px) {
@@ -36,5 +60,16 @@
         height: 264px;
         border-radius: 8px;
         padding: 16px;
+    }
+
+    .CategoryCard p {
+        font-size: 18px;
+        line-height: 28px;
+        margin: 8px 0;
+    }
+
+    .CategoryCard a {
+        font-size: 14px;
+        line-height: 24px;
     }
 }
