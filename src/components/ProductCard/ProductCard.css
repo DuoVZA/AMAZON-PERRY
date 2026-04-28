@@ -1,7 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-.noSale {
+.hide,
+.available {
     display: none;
+}
+
+.unavailable {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    background-color: #ffffffcc;
+    box-sizing: border-box;
+}
+
+.unavailable button {
+    font-family: Mulish;
+    font-weight: 400;
+    letter-spacing: 2%;
+    color: #0E2042;
+
+    border: none;
+    border-radius: 4px;
+    background-color: #B8EA48;
 }
 
 .ProductCard-small,
@@ -13,6 +34,27 @@
 
     background-color: #F4FAFF;
     box-sizing: border-box;
+    position: relative;
+}
+
+.wishlist {
+    border-radius: 2px;
+    padding: 0 16px;
+    background: #F4FAFF;
+    border: 1.5px solid #4A7BD9;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    z-index: 2;
+}
+
+.wishlist p {
+    font-family: Mulish;
+    font-weight: 400;
+    letter-spacing: 2%;
+    text-align: center;
+
+    margin: 0;
 }
 
 .ProductCard-small #discount,
@@ -130,8 +172,15 @@
     color: #0E204280;
 }
 
-/* PHONE */
+/* Mobile */
 @media (min-width: 320px) and (max-width: 1024px) {
+
+    .ProductCard-small .unavailable,
+    .ProductCard-big .unavailable {
+        width: 171px;
+        height: 270px;
+        border-radius: 4px;
+    }
 
     .ProductCard-small,
     .ProductCard-big {
@@ -139,6 +188,16 @@
         height: 270px;
         border-radius: 4px;
         padding: 14px;
+    }
+
+    .wishlist {
+        width: 78px;
+        height: 27px;
+    }
+
+    .wishlist p {
+        font-size: 12px;
+        line-height: 16px;
     }
 
     .ProductCard-small #image,
@@ -162,6 +221,7 @@
 
     .ProductCard-small #discount>p,
     .ProductCard-big #discount>p {
+        right: 12px;
         font-size: 12px;
         line-height: 16px;
     }
@@ -214,10 +274,103 @@
         font-size: 12px;
         line-height: 16px;
     }
+
+    .unavailable {
+        padding: 25.5px;
+    }
+
+    .unavailable>div {
+        position: relative;
+        top: 20px;
+        width: 120px;
+    }
+
+    .unavailable p {
+        font-weight: 500;
+        letter-spacing: -1.5%;
+        font-size: 20px;
+        line-height: 24px;
+        margin: 8px 0;
+    }
+
+    .unavailable button {
+        width: 120px;
+        height: 32px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .ProductCard-small,
+    .ProductCard-big {
+        font-family: Mulish;
+        letter-spacing: 2%;
+        text-align: center;
+        color: #0E2042;
+
+        background-color: #F4FAFF;
+        box-sizing: border-box;
+        position: relative;
+    }
 }
 
-/* PC */
+/* Desktop */
 @media (min-width: 1025px) {
+    .ProductCard-small .unavailable {
+        width: 225px;
+        height: 361px;
+        border-radius: 8px;
+        padding: 16px;
+    }
+
+    .ProductCard-big .unavailable {
+        width: 382px;
+        height: 534px;
+        border-radius: 8px;
+        padding: 61px;
+    }
+
+    .ProductCard-small .unavailable>div {
+        position: relative;
+        top: 45px;
+        width: 193px;
+    }
+
+    .ProductCard-big .unavailable>div {
+        position: relative;
+        top: 45px;
+        width: 260px;
+    }
+
+    .ProductCard-small .unavailable p {
+        font-weight: 500;
+        letter-spacing: -1.5%;
+        font-size: 24px;
+        line-height: 28px;
+        margin: 12px 0;
+    }
+
+    .ProductCard-big .unavailable p {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: -2%;
+        margin: 14px 0;
+    }
+
+    .ProductCard-small .unavailable button {
+        width: 147px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .ProductCard-big .unavailable button {
+        width: 107px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
     .ProductCard-small {
         width: 225px;
         height: 361px;
@@ -230,6 +383,16 @@
         height: 534px;
         border-radius: 8px;
         padding: 24px;
+    }
+
+    .wishlist {
+        width: 85px;
+        height: 30px;
+    }
+
+    .wishlist p {
+        font-size: 14px;
+        line-height: 24px;
     }
 
     .ProductCard-small #image {

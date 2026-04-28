@@ -2,6 +2,8 @@ import './ProductCard.css';
 
 export function ProductCard(props) {
   return <div className={props.size}>
+    <div className={props.unavailable}><div><p>Out of stock</p><button>Stock alert</button></div></div>
+    <button className={props.wishlist}><p>Remove</p></button>
     <div id='image'>
       <div className={props.sale} id="discount">
         <p>{props.discount}</p>
