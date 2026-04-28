@@ -5,6 +5,7 @@ import './App.css'
 
 import Header from "./components/Header/Header";
 import MenuBar from "./components/MenuBar/MenuBar";
+import Footer from "./components/Footer/Footer";
 
 // Пока заглушки для страниц (создадим позже)
 const MainPage = () => <div className="MainPage"><h1>Главная страница (Main Page)</h1></div>;
@@ -25,6 +26,8 @@ function App() {
         <Route path="/" element={<MainPage />} />
         {/* Сюда будем добавлять другие страницы позже */}
       </Routes>
+
+      <Footer/>
     </Router>
   );
 }
