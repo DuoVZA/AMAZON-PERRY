@@ -6,9 +6,7 @@ import './App.css'
 import Header from "./components/Header/Header";
 import MenuBar from "./components/MenuBar/MenuBar";
 import Footer from "./components/Footer/Footer";
-
-// Пока заглушки для страниц (создадим позже)
-const MainPage = () => <div className="MainPage"><h1>Главная страница (Main Page)</h1></div>;
+import Main from "./components/Main/Main";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,8 +21,7 @@ function App() {
       />
 
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        {/* Сюда будем добавлять другие страницы позже */}
+        <Route path="/" element={<Main />} />
       </Routes>
 
       <Footer/>

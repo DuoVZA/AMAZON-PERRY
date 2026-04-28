@@ -73,7 +73,7 @@ export default function Footer() {
       <div className="lower-footer">
         <div className="lower-footer-content">
           <div className="logo">
-            <img src="/images/icons/logo.png" width={90.7} height={25} alt="PERRY" />
+            <img src="/images/icons/logo.png" width={70} height={20} alt="PERRY" />
           </div>
           <p className="copyright">© 2024 Du Soleil. All rights reserved.</p>
         </div>

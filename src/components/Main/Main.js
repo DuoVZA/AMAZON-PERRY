@@ -1,11 +1,17 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import "./Main.css";
+import Add from "./Advertisement/Add"; // Убираем фигурные скобки, так как export default
 
-import './Main.css';
+export default function Main() {  // Добавляем export default
+  return (
+    <main className="main">
+      <div className="main-container">
+        <Add />
 
-import {Header} from '../Header/Header.js';
-
-function Main() {
-
+        <section className="products-section">
+          <h2>Trending Deals</h2>
+          {/* Товары и т.д. */}
+        </section>
+      </div>
+    </main>
+  );
 }
-
-export default Main;
