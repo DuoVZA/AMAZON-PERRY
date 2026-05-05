@@ -5,7 +5,8 @@ function App() {
   return (
     <main className="main">
       <div className="main-container">
-        <CategorySlider/>
+        <CategorySlider categories='first'/>
+        <CategorySlider categories='second'/>
         <section className="products-section">
           {/* <h2>Trending Deals</h2> */}
         </section>

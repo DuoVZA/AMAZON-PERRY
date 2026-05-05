@@ -11,6 +11,11 @@
     font-weight: 400;
     margin: 0 12px;
     letter-spacing: 2%;
+    box-sizing: border-box;
+}
+
+.CategoryCard:hover {
+    border: 2px solid #CCDDFF;
 }
 
 .CategoryCard>#seeAll {
