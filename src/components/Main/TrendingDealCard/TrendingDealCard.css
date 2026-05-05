@@ -1,0 +1,103 @@
+/* TrendingDealCard.module.css */
+
+/* Главный контейнер карточки */
+.dealCard {
+  width: 160px; /* Фиксированная ширина карточки как на макете */
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif; /* Подбор стандартного шрифта */
+  margin-right: 12px; /* Отступ между карточками */
+}
+
+/* Контейнер для изображения */
+.imageContainer {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Сохраняет квадратные пропорции */
+  background-color: #f6f6f6; /* Легкий фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 8px; /* Отступ от изображения к тексту */
+}
+
+/* Стили для изображения (или "X" заглушки) */
+.image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Если вам нужна заглушка "X", вы можете добавить такой стиль */
+.imagePlaceholder {
+  font-size: 100px;
+  color: #ccc;
+  line-height: 1;
+}
+
+/* Контейнер для текстовой информации */
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Заголовок товара */
+.title {
+  font-size: 13px; /* Мелкий шрифт, как на макете */
+  font-weight: 400; /* Не жирный */
+  color: #333;
+  margin: 0 0 6px 0; /* Отступ снизу */
+  /* Ограничение текста двумя строками */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+}
+
+/* Ряд с рейтингом и отзывами */
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.star {
+  color: #000; /* Черная звезда */
+  margin-right: 4px;
+}
+
+.ratingValue {
+  font-weight: 700;
+  margin-right: 8px; /* Отступ между рейтингом и отзывами */
+}
+
+.reviewsWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.reviewsIcon {
+  font-size: 14px; /* Чуть больше для четкости */
+  margin-right: 4px;
+}
+/* Ряд с ценой */
+.priceRow {
+  display: flex;
+  align-items: baseline; /* Выравнивание по базовой линии текста */
+}
+
+.currentPrice {
+  font-size: 20px; /* Большая цена */
+  font-weight: 700;
+  color: #000;
+  margin-right: 8px; /* Отступ к старой цене */
+}
+
+.originalPrice {
+  font-size: 13px; /* Маленькая старая цена */
+  color: #888;
+  text-decoration: line-through; /* Зачеркивание */
+}

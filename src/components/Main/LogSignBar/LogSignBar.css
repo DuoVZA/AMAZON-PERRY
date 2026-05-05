@@ -1,0 +1,155 @@
+/* ─── Promo Banner ─────────────────────────────────────── */
+.promo-banner {
+  width: 100%;
+  max-width: 100%;
+  margin: 40px 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.promo-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  height: 217.525px;
+}
+
+/* Фоновое изображение — растянуто на весь контейнер */
+.promo-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.promo-image-img {
+  width: 1130px;
+  height: 100%;
+  object-fit: contain;
+  object-position: right center;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Контент поверх фона */
+.promo-content {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  text-align: center;
+  padding: 50px 40px;
+  margin-left: -48%;
+}
+
+.promo-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+  color: white;
+}
+
+.promo-description {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+  color: white;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+/* Кнопки */
+.promo-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.promo-btn {
+  padding: 6px 20px;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.signup-btn1 {
+  background: rgba(184, 234, 72, 1);
+  color: rgba(14, 32, 66, 1);
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+  border: rgba(184, 234, 72, 1) 2px solid;
+}
+
+.signup-btn1:hover {
+  background: none;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.login-btn1 {
+  background: none;
+  color: white;
+  border: white 2px solid;
+}
+
+.login-btn1:hover {
+  background: white;
+  color: #333;
+  transform: translateY(-2px);
+}
+
+/* ─── Адаптация под мобильные ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .promo-banner {
+    margin: 20px auto;
+    padding: 0 16px;
+  }
+
+  .promo-content {
+    padding: 40px 24px;
+  }
+
+  .promo-title {
+    font-size: 32px;
+  }
+
+  .promo-description {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .promo-buttons {
+    justify-content: center;
+  }
+
+  .promo-btn {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-title {
+    font-size: 26px;
+  }
+
+  .promo-description {
+    font-size: 14px;
+  }
+
+  .promo-buttons {
+    gap: 12px;
+  }
+
+  .promo-btn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}
