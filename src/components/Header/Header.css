@@ -29,8 +29,13 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
-  padding: 0;                    /* убрал padding: 8px, чтобы размер был точно 32px */
+  padding: 8px;                    /* убрал padding: 8px, чтобы размер был точно 32px */
   flex-shrink: 0;
+}
+
+.burger-btn:hover {
+  border-radius: 10%;
+  background: rgba(255,255,255,0.15);
 }
 
 .burger-btn span {
@@ -47,6 +52,10 @@
   align-items: center;
   height: 20.06px;               /* точная высота по твоей картинке */
   flex-shrink: 0;
+}
+
+.logo:hover {
+  cursor: pointer;
 }
 
 /* Поиск — полностью оставил как у тебя было */
