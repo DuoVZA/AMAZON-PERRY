@@ -9,7 +9,7 @@
     justify-content: space-between;
     font-family: Mulish;
     font-weight: 400;
-
+    margin: 0 12px;
     letter-spacing: 2%;
 }
 
@@ -40,6 +40,7 @@
         height: 197px;
         border-radius: 4px;
         padding: 14px;
+        margin: 0 8px;
     }
 
     .CategoryCard p {

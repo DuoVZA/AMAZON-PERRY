@@ -7,7 +7,7 @@ function App() {
       <div className="main-container">
         <CategorySlider/>
         <section className="products-section">
-          <h2>Trending Deals</h2>
+          {/* <h2>Trending Deals</h2> */}
         </section>
       </div>
     </main>

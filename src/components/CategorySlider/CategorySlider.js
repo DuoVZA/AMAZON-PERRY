@@ -20,8 +20,12 @@ const categories = [
 
 export function CategorySlider(props) {
   return (
+    <>
+    <button className='arrow-left'><img src='../images/icons/Products-arrow-left.png'></img></button>
+    <button className='arrow-right'><img src='../images/icons/Products-arrow-right.png'></img></button>
     <div id='container'>
       {categories.map(elem => <CategoryCard item={elem} ></CategoryCard>)}
     </div>
+    </>
   );
 }
