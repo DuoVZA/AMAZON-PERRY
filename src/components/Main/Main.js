@@ -3,7 +3,7 @@ import Add from "./Advertisement/Add";
 import LogSignBar from "./LogSignBar/LogSignBar";
 import TrendingDealCard from "./TrendingDealCard/TrendingDealCard";
 
-export default function Main() {
+export default function Main({ onOpenLogin }) {
   return (
     <main className="main">
       <div className="main-container">
@@ -14,7 +14,7 @@ export default function Main() {
           <TrendingDealCard/>
         </section>
 
-        <LogSignBar imageSrc="/images/banners/Banner-LoginSignup-Desktop.png"/>
+        <LogSignBar imageSrc="/images/banners/Banner-LoginSignup-Desktop.png" onOpenLogin={onOpenLogin}/>
       </div>
     </main>
   );

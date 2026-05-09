@@ -22,7 +22,7 @@ const CATALOG_OPTIONS = [
   { name: "Work tools", icon: "/images/icons/work-tools.png" }
 ];
 
-export default function MenuBar({ isOpen, onClose }) {
+export default function MenuBar({ isOpen, onClose, onOpenLogin }) { // Добавляем onOpenLogin
   const navigate = useNavigate();
   const [isCatalogOpen, setIsCatalogOpen] = useState(false);
 
@@ -42,13 +42,13 @@ export default function MenuBar({ isOpen, onClose }) {
   };
 
   const handleSignUp = () => {
-    navigate("/signup");
     onClose();
+    onOpenLogin('signup'); // Открываем модалку с режимом signup
   };
 
   const handleLogIn = () => {
-    navigate("/login");
     onClose();
+    onOpenLogin('login'); // Открываем модалку с режимом login
   };
 
   return (

@@ -1,15 +1,12 @@
 import "./LogSignBar.css";
-import { useNavigate } from "react-router-dom";
 
-export default function LogSignBar({ imageSrc }) {
-  const navigate = useNavigate();
-
+export default function LogSignBar({ imageSrc, onOpenLogin }) { // Добавляем onOpenLogin
   const handleSignUp = () => {
-    navigate("/signup");
+    onOpenLogin('signup');
   };
 
   const handleLogIn = () => {
-    navigate("/login");
+    onOpenLogin('login');
   };
 
   return (
