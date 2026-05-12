@@ -1,0 +1,104 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.header {
+  background: rgba(74, 123, 217, 1);
+  height: 64px;
+  display: flex;
+  justify-content: center;        /* оставил как у тебя было */
+  align-items: center;
+  padding: 0 160px;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* Бургер — только размер 32×32 */
+.burger-btn {
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px;                    /* убрал padding: 8px, чтобы размер был точно 32px */
+  flex-shrink: 0;
+}
+
+.burger-btn:hover {
+  border-radius: 10%;
+  background: rgba(255,255,255,0.15);
+}
+
+.burger-btn span {
+  width: 18px;                   /* чуть уже, чтобы красиво смотрелось в 32px */
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Логотип — точный размер */
+.logo {
+  display: flex;
+  align-items: center;
+  height: 20.06px;               /* точная высота по твоей картинке */
+  flex-shrink: 0;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+/* Поиск — полностью оставил как у тебя было */
+.search-container {
+  flex: 1;
+  max-width: 1238px;
+  display: flex;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 40px;
+}
+
+.search-bar {
+  flex: 1;
+  border: none;
+  padding: 0 14px;
+  font-size: 15px;
+  outline: none;
+}
+
+.search-btn {
+  background: rgba(184, 234, 72, 1);
+  border: none;
+  width: 56px;
+  cursor: pointer;
+}
+
+.search-btn:hover { background: #a5d13f; }
+
+/* Иконки — без изменений */
+.header-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.icon-btn:hover { background: rgba(255,255,255,0.15); }
