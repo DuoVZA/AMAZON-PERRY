@@ -9,8 +9,13 @@
     justify-content: space-between;
     font-family: Mulish;
     font-weight: 400;
-
+    margin: 0 12px;
     letter-spacing: 2%;
+    box-sizing: border-box;
+}
+
+.CategoryCard:hover {
+    border: 2px solid #CCDDFF;
 }
 
 .CategoryCard>#seeAll {
@@ -40,6 +45,7 @@
         height: 197px;
         border-radius: 4px;
         padding: 14px;
+        margin: 0 8px;
     }
 
     .CategoryCard p {
