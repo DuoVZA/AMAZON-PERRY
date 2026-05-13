@@ -1,0 +1,41 @@
+#container {
+    width: 1600px;
+    height: 264px;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 0 12px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#container::-webkit-scrollbar {
+    display: none;
+}
+
+.CategoryCard {
+    scroll-snap-align: end;
+}
+
+#container::scroll-button(left) {
+    content: url('../../../public/images/icons/Products-arrow-left.png');
+}
+
+#container::scroll-button(right) {
+    content: url('../../../public/images/icons/Products-arrow-right.png');
+    position-area: center right;
+}
+
+#container::scroll-button(*) {
+    cursor: pointer;
+    border: 0;
+    background: none;
+    z-index: 2;
+    position: relative;
+}
+
+#container::scroll-button(*):disabled {
+    opacity: 0.5;
+    cursor: unset;
+}
