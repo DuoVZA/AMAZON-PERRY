@@ -38,12 +38,12 @@ function App() {
       />
 
       <MBFLS
-  isOpen={authOpen}
-  onClose={() => setAuthOpen(false)}
-  imageSrc="/images/banners/Rectangle 413.png"
-  initialMode={authMode}
-  onLoginSuccess={handleLoginSuccess}
-/>
+        isOpen={authOpen}
+        onClose={() => setAuthOpen(false)}
+        imageSrc="/images/banners/Rectangle 413.png"
+        initialMode={authMode}
+        onLoginSuccess={handleLoginSuccess}
+      />
 
       <Routes>
         <Route path="/" element={<Main onOpenLogin={handleOpenLogin} />} />
