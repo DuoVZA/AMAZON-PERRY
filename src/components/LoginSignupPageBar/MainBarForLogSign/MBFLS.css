@@ -1,0 +1,109 @@
+/* AuthModal.css */
+
+.login-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.login-overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.login-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  width: 928px;
+  max-width: 90vw;
+  height: 493px;
+  padding: 24px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  display: flex;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.login-modal.open {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.login-form-container {
+  flex: 1;
+  overflow-y: auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 319px;
+  margin: 0 auto;
+}
+
+.login-image-container {
+  width: 384.25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.login-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+@media (max-width: 768px) {
+  .login-modal {
+    width: 90vw;
+    height: auto;
+    max-height: 90vh;
+    flex-direction: column;
+  }
+
+  .login-image-container {
+    width: 100%;
+    height: 160px;
+    order: -1;
+  }
+
+  .login-form-container {
+    padding: 32px 24px;
+  }
+
+  .login-title {
+    font-size: 28px;
+  }
+  
+  .input-floating-field {
+    width: 100%;
+  }
+  
+  .login-form {
+    max-width: 100%;
+  }
+}

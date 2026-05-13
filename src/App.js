@@ -7,7 +7,7 @@ import Header from "./components/Header/Header";
 import MenuBar from "./components/MenuBar/MenuBar";
 import Footer from "./components/Footer/Footer";
 import Main from "./components/Main/Main";
-import Login from "./components/LoginSignupPageBar/Login/Login";
+import MBFLS from "./components/LoginSignupPageBar/MainBarForLogSign/MBFLS";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,7 +37,7 @@ function App() {
         onOpenLogin={handleOpenLogin}
       />
 
-      <Login 
+      <MBFLS
   isOpen={authOpen}
   onClose={() => setAuthOpen(false)}
   imageSrc="/images/banners/Rectangle 413.png"

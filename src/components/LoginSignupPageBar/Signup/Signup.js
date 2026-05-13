@@ -1,28 +1,28 @@
-import { useState } from "react";
-import "./Login.css";
+import "./Signup.css";
 
-export default function LoginForm({ 
-  email, 
-  setEmail, 
-  password, 
-  setPassword, 
-  staySignedIn, 
-  setStaySignedIn,
+export default function SignUpForm({
+  email,
+  setEmail,
+  password,
+  setPassword,
+  confirmPassword,
+  setConfirmPassword,
   emailError,
   passwordError,
+  confirmPasswordError,
   emailFocused,
   setEmailFocused,
   passwordFocused,
   setPasswordFocused,
-  onForgotPassword,
+  confirmPasswordFocused,
+  setConfirmPasswordFocused,
   onSubmit,
-  onSwitchToSignUp,
-  onForgotPasswordClick
+  onSwitchToLogin
 }) {
   return (
     <>
-      <h2 className="login-title">Welcome back</h2>
-      <p className="login-subtitle">Login into your account</p>
+      <h2 className="login-title">Create account</h2>
+      <p className="login-subtitle">Shop in the marketplace while traveling</p>
 
       <form onSubmit={onSubmit}>
         <div className={`input-floating-group ${emailError ? "error-label" : ""}`}>
@@ -57,28 +57,39 @@ export default function LoginForm({
           {passwordError && <div className="error-message">{passwordError}</div>}
         </div>
 
-        <div className="login-options">
-          <label className="checkbox-label">
-            <input
-              type="checkbox"
-              checked={staySignedIn}
-              onChange={(e) => setStaySignedIn(e.target.checked)}
-            />
-            Stay signed in
+        <div className={`input-floating-group ${confirmPasswordError ? "error-label" : ""}`}>
+          <input
+            type="password"
+            className={`input-floating-field ${confirmPasswordFocused || confirmPassword ? "filled" : ""}`}
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            onFocus={() => setConfirmPasswordFocused(true)}
+            onBlur={() => setConfirmPasswordFocused(false)}
+            required
+          />
+          <label className={`input-floating-label ${confirmPasswordFocused || confirmPassword ? "active" : ""}`}>
+            Confirm Password
           </label>
-          <button type="button" className="forgot-password" onClick={onForgotPasswordClick}>
-            Forgot password?
-          </button>
+          {confirmPasswordError && <div className="error-message">{confirmPasswordError}</div>}
         </div>
 
-        <button type="submit" className="login-button">Log in</button>
+        <button type="submit" className="login-button">Continue</button>
       </form>
 
       <div className="signup-link">
-        Don't have an account?{" "}
-        <button onClick={onSwitchToSignUp} className="signup-button">
-          Sign up
+        Already have an account?{" "}
+        <button onClick={onSwitchToLogin} className="signup-button">
+          Log in
         </button>
+      </div>
+
+      <div className="terms-text">
+        By clicking "Continue", you agree with{" "}
+        <a href="/terms" className="terms-link" onClick={(e) => {
+          e.preventDefault();
+        }}>
+          PERRY Terms and Conditions
+        </a>
       </div>
     </>
   );
