@@ -14,19 +14,28 @@ export default function Main({ onOpenLogin }) {
           <CategorySlider categories="first"/>
         </section>
 
+        <div className="line"></div>
+
         <section className="products-section1">
           <h2>Trending Deals</h2>
+          {/* <a><p>See all</p></a> */}
           <ProductSlider categories="trending"/>
         </section>
+
+        <div className="line1"></div>
 
         <section className="products-section">
           <CategorySlider categories="second"/>
         </section>
 
+        <div className="line"></div>
+
         <section className="products-section1">
           <h2>Sales</h2>
           <ProductSlider categories="sales"/>
         </section>
+
+        <div className="line1"></div>
 
         <LogSignBar imageSrc="/images/banners/Banner-LoginSignup-Desktop.png" onOpenLogin={onOpenLogin}/>
       </div>

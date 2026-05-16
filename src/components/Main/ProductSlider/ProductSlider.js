@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import './ProductSlider.css';
 import ProductCard from './ProductCard/ProductCard';
 
+// Оригинальные данные
 const productsData = [
   {img:'/images/products/Classic -Analog-Alarm-Clock.png', name:'Classic Analog Alarm Clock, 4-inch Super', stars:'4', comments:'149', price:'67', priceCent:'99', oldPrice:'', discount:'', size:'small', sale:'hide', unavailable:''},
   {img:'/images/products/Everyday-Deadlift-Shoes Cross-Trainer-Sneakers-for-Men-and-Women.png', name:'Everyday Deadlift Shoes Cross Trainer Sneakers for Men and Women', stars:'4', comments:'149', price:'67', priceCent:'99', oldPrice:'99.99', discount:'-30%', size:'small', sale:'', unavailable:''},
@@ -16,6 +17,9 @@ const productsData = [
   {img:'/images/products/VANLINKER-Small-Retro-Skinny-Cat-Eye-Sunglasses-for-Women.png', name:'VANLINKER Small Retro Skinny Cat Eye Sunglasses for Women', stars:'4', comments:'149', price:'67', priceCent:'99', oldPrice:'', discount:'', size:'small', sale:'hide', unavailable:''},
   {img:'/images/products/Zeagoo-Women\'s-Casual-Summer-Shirt-Dress-with-Long-Sleeves.png', name:'Zeagoo Women\'s Casual Summer Shirt Dress with Long Sleeves', stars:'4', comments:'149', price:'67', priceCent:'99', oldPrice:'79.99', discount:'-15%', size:'small', sale:'', unavailable:''}
 ];
+
+// Перевернутые данные (для второй карусели)
+const productsDataReversed = [...productsData].reverse();
 
 export default function ProductSlider({ categories = 'trending' }) {
   const sliderRef = useRef(null);
@@ -32,10 +36,13 @@ export default function ProductSlider({ categories = 'trending' }) {
     }
   };
 
+  // Выбираем данные в зависимости от пропса categories
+  const data = categories === 'trending' ? productsData : productsDataReversed;
+
   return (
-    <div className="slider-wrapper">
-      <div id="container" ref={sliderRef}>
-        {productsData.map((elem, index) => (
+    <div className="slider-wrapper1">
+      <div id="container1" ref={sliderRef}>
+        {data.map((elem, index) => (
           <ProductCard
             key={index}
             size={elem.size}
@@ -53,13 +60,13 @@ export default function ProductSlider({ categories = 'trending' }) {
         ))}
       </div>
 
-      <button className="arr-btn1 arr-left" onClick={goToPrev}>
+      <button className="arr-btn2 arr-left1" onClick={goToPrev}>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M15 18L9 12L15 6" stroke="rgba(74, 123, 217, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </button>
 
-      <button className="arr-btn1 arr-right" onClick={goToNext}>
+      <button className="arr-btn2 arr-right1" onClick={goToNext}>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M9 18L15 12L9 6" stroke="rgba(74, 123, 217, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>

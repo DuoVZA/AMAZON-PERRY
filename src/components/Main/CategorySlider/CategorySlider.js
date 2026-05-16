@@ -32,7 +32,7 @@ const categoriesSecond = [
   {img:'/images/categories/Stylish-womens-clothing-new-season.png', name:'Stylish women’s clothing: new season'}
 ];
 
-export default function CategorySlider({ categories = 'first' }) {
+export default function CategorySlider({ categories = 'first' }) {  
   const sliderRef = useRef(null);
   const data = categories === 'first' ? categoriesFirst : categoriesSecond;
 

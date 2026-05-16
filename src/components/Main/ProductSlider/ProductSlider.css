@@ -1,14 +1,14 @@
 /* ProductSlider.css */
-.slider-wrapper {
+.slider-wrapper1 {
     position: relative;
     width: 100%;
-    max-width: 1140px;
+    max-width: 1080px;
     margin: 0 auto;
 }
 
-#container {
+#container1 {
     width: 100%;
-    max-width: 1140px;
+    max-width: 1080px;
     height: auto;
     min-height: 264px;
     display: flex;
@@ -23,7 +23,7 @@
     margin: 0 auto;
 }
 
-#container::-webkit-scrollbar {
+#container1::-webkit-scrollbar {
     display: none;
 }
 
@@ -33,8 +33,8 @@
     width: 200px;
 }
 
-/* Кнопки-стрелки - исправлено название */
-.arr-btn1 {
+/* Кнопки-стрелки */
+.arr-btn2 {
     position: absolute;
     top: 50%;
     opacity: 0.5;
@@ -54,46 +54,46 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.arr-btn1:hover {
+.arr-btn2:hover {
     background: white;
     transform: translateY(-50%) scale(1.1);
     opacity: 1;
 }
 
-.arr-btn1:active {
+.arr-btn2:active {
     transform: translateY(-50%) scale(0.95);
 }
 
-.arr-btn1 svg {
+.arr-btn2 svg {
     width: 25px;
     height: 25px;
 }
 
-/* Исправлено название классов для позиционирования */
-.arr-left {
-    left: 0;
+/* ТОЛЬКО СДВИГ СТРЕЛОК В СТОРОНЫ - ОТРИЦАТЕЛЬНЫЕ ЗНАЧЕНИЯ */
+.arr-left1 {
+    left: -35px;
 }
 
-.arr-right {
-    right: 0;
+.arr-right1 {
+    right: -35px;
 }
 
 @media (max-width: 768px) {
-    .arr-btn1 {
+    .arr-btn2 {
         width: 32px;
         height: 32px;
     }
 
-    .arr-btn1 svg {
+    .arr-btn2 svg {
         width: 16px;
         height: 16px;
     }
 
-    .arr-left {
-        left: -10px;
+    .arr-left1 {
+        left: -30px;
     }
 
-    .arr-right {
-        right: -10px;
+    .arr-right1 {
+        right: -30px;
     }
 }
