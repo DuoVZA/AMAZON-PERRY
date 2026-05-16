@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 .CategoryCard {
-    background-color: #F4FAFF;
-    box-shadow: 0px 4px 11.5px -5px #2050AD40;
+    background-color: rgba(244, 250, 255, 1);
+    box-shadow: 0px 4px 11.5px -5px rgba(32, 80, 173, 0.25);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -62,16 +62,16 @@
 
 @media (min-width: 1025px) {
     .CategoryCard {
-        width: 239px;
-        height: 264px;
+        width: 200px;
+        height: 220px;
         border-radius: 8px;
-        padding: 16px;
+        padding: 12px;
     }
 
     .CategoryCard p {
-        font-size: 18px;
-        line-height: 28px;
-        margin: 8px 0;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 4px 0;
     }
 
     .CategoryCard a {

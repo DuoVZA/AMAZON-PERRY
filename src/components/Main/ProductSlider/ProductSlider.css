@@ -1,0 +1,99 @@
+/* ProductSlider.css */
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+#container {
+    width: 100%;
+    max-width: 1140px;
+    height: auto;
+    min-height: 264px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    scrollbar-width: none;
+    margin: 0 auto;
+}
+
+#container::-webkit-scrollbar {
+    display: none;
+}
+
+.ProductCard {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 200px;
+}
+
+/* Кнопки-стрелки - исправлено название */
+.arr-btn1 {
+    position: absolute;
+    top: 50%;
+    opacity: 0.5;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 10%;
+    background: white;
+    border: 2px solid rgba(74, 123, 217, 1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.arr-btn1:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+    opacity: 1;
+}
+
+.arr-btn1:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.arr-btn1 svg {
+    width: 25px;
+    height: 25px;
+}
+
+/* Исправлено название классов для позиционирования */
+.arr-left {
+    left: 0;
+}
+
+.arr-right {
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .arr-btn1 {
+        width: 32px;
+        height: 32px;
+    }
+
+    .arr-btn1 svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .arr-left {
+        left: -10px;
+    }
+
+    .arr-right {
+        right: -10px;
+    }
+}

@@ -85,34 +85,6 @@ export default function Add() {
           <path d="M9 18L15 12L9 6" stroke="rgba(74, 123, 217, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </button>
-
-      {/* Индикаторы (точки) */}
-      <div className="dots">
-        {ADDS_ARRAY.map((_, index) => (
-          <button
-            key={index}
-            className={`dot ${index === currentIndex ? "active" : ""}`}
-            onClick={() => {
-              if (!isAnimating && index !== currentIndex) {
-                if (index > currentIndex) {
-                  setNextIndex(index);
-                  setDirection('next');
-                } else {
-                  setNextIndex(index);
-                  setDirection('prev');
-                }
-                setIsAnimating(true);
-                setTimeout(() => {
-                  setCurrentIndex(index);
-                  setNextIndex(null);
-                  setDirection('');
-                  setIsAnimating(false);
-                }, 500);
-              }
-            }}
-          />
-        ))}
-      </div>
     </div>
   );
 }

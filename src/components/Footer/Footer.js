@@ -72,7 +72,7 @@ export default function Footer() {
       
       <div className="lower-footer">
         <div className="lower-footer-content">
-          <div className="logo">
+          <div className="logo" onClick={() => (window.location.href = "/")}>
             <img src="/images/icons/logo.png" width={70} height={20} alt="PERRY" />
           </div>
           <p className="copyright">© 2024 Du Soleil. All rights reserved.</p>

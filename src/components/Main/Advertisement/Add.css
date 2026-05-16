@@ -147,38 +147,6 @@
   right: 16px;
 }
 
-/* ─── Индикаторы (точки) ─────────────────────────────────────── */
-.dots {
-  position: absolute;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 10;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0;
-}
-
-.dot.active {
-  width: 24px;
-  border-radius: 4px;
-  background: white;
-}
-
-.dot:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
-
 /* ─── Адаптация под мобильные ─────────────────────────────────────── */
 @media (max-width: 768px) {
   .banner-container {

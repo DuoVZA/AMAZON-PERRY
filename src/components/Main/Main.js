@@ -1,7 +1,8 @@
 import "./Main.css";
 import Add from "./Advertisement/Add";
 import LogSignBar from "./LogSignBar/LogSignBar";
-import TrendingDealCard from "./TrendingDealCard/TrendingDealCard";
+import ProductSlider from "./ProductSlider/ProductSlider";
+import CategorySlider from "./CategorySlider/CategorySlider";
 
 export default function Main({ onOpenLogin }) {
   return (
@@ -10,8 +11,21 @@ export default function Main({ onOpenLogin }) {
         <Add />
 
         <section className="products-section">
+          <CategorySlider categories="first"/>
+        </section>
+
+        <section className="products-section1">
           <h2>Trending Deals</h2>
-          <TrendingDealCard/>
+          <ProductSlider categories="trending"/>
+        </section>
+
+        <section className="products-section">
+          <CategorySlider categories="second"/>
+        </section>
+
+        <section className="products-section1">
+          <h2>Sales</h2>
+          <ProductSlider categories="sales"/>
         </section>
 
         <LogSignBar imageSrc="/images/banners/Banner-LoginSignup-Desktop.png" onOpenLogin={onOpenLogin}/>
