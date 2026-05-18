@@ -109,7 +109,7 @@ export function Filter(props) {
   return <div id={props.filter} className={props.style + " filter closed"}>
     <div className='dropdown-container'><h2>{props.filter}</h2><button onClick={HandleDropdown}><img src='./images/icons/Arrow_up.png' /></button></div>
     <div id='filter-dropdown'>
-      <div className={"search-container " + props.style}>
+      <div className={props.style+" SearchContainer"}>
         <button className="search-btn"><img src='./images/icons/search-Icon.png' /></button>
         <input
           className="search-bar"
@@ -117,10 +117,10 @@ export function Filter(props) {
           type="text"
         />
       </div>
-      <label htmlFor={props.filter+'Slider'} className={props.style+'Slider'}>hello</label>
-      <div className={props.filter+'Sliders'}>
-        <input id={props.filter+'FromSlider'} type='range' min="0" max="250"></input>
-        <input id={props.filter+'ToSlider'} type='range' min="0" max="250"></input>
+      <div className={props.style+' SliderContainer'}>
+        <div class="slider-track"></div>
+        <input id='FromSlider' type='range' value="30" min="0" max="250"></input>
+        <input id='ToSlider' type='range' value="30" min="0" max="250"></input>
       </div>
       <ul className={props.style+'Checkbox'}>
         {props.options.map(elem => <li><label for={elem.name}><input type='checkbox' id={elem.name}></input><span className="checkmark"></span><p>{elem.name}</p></label></li>)}
