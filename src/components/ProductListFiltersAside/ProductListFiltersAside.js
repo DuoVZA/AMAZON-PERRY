@@ -66,35 +66,43 @@ const sizes = [
 ]
 
 const colors = [
-  {name:"White"},
-  {name:"Black"},
-  {name:"Red"},
-  {name:"Yellow"},
-  {name:"Orange"},
-  {name:"Green"},
-  {name:"Azure"},
-  {name:"Blue"},
-  {name:"Purple"},
-  {name:"Pink"},
-  {name:"Brown"},
-  {name:"Grey"},
-  {name:"Auburn"},
-  {name:"Burgundy"},
-  {name:"Crimson"},
-  {name:"Scarlet"},
-  {name:"Ruby"},
-  {name:"Magenta"},
-  {name:"Coral"},
-  {name:"Raspberry"},
-  {name:"Salmon"},
-  {name:"Copper"},
-  {name:"Flame"},
-  {name:"Tangerine"},
-  {name:"Golden"},
-  {name:"Amber"},
-  {name:"Sand"},
-  {name:"Saffron"},
-  {name:"Cream"}
+  { name: "White" },
+  { name: "Black" },
+  { name: "Red" },
+  { name: "Yellow" },
+  { name: "Orange" },
+  { name: "Green" },
+  { name: "Azure" },
+  { name: "Blue" },
+  { name: "Purple" },
+  { name: "Pink" },
+  { name: "Brown" },
+  { name: "Grey" },
+  { name: "Auburn" },
+  { name: "Burgundy" },
+  { name: "Crimson" },
+  { name: "Scarlet" },
+  { name: "Ruby" },
+  { name: "Magenta" },
+  { name: "Coral" },
+  { name: "Raspberry" },
+  { name: "Salmon" },
+  { name: "Copper" },
+  { name: "Flame" },
+  { name: "Tangerine" },
+  { name: "Golden" },
+  { name: "Amber" },
+  { name: "Sand" },
+  { name: "Saffron" },
+  { name: "Cream" }
+]
+
+const reviews = [
+  { img1: "./images/icons/Icon-Star-full.png", img2: "./images/icons/Icon-Star-full.png", img3: "./images/icons/Icon-Star-full.png", img4: "./images/icons/Icon-Star-full.png", img5: "./images/icons/Icon-Star-full.png" },
+  { img1: "./images/icons/Icon-Star-full.png", img2: "./images/icons/Icon-Star-full.png", img3: "./images/icons/Icon-Star-full.png", img4: "./images/icons/Icon-Star-full.png", img5: "./images/icons/Icon-Star-full.png" },
+  { img1: "./images/icons/Icon-Star-full.png", img2: "./images/icons/Icon-Star-full.png", img3: "./images/icons/Icon-Star-full.png", img4: "./images/icons/Icon-Star-full.png", img5: "./images/icons/Icon-Star-full.png" },
+  { img1: "./images/icons/Icon-Star-full.png", img2: "./images/icons/Icon-Star-full.png", img3: "./images/icons/Icon-Star-full.png", img4: "./images/icons/Icon-Star-full.png", img5: "./images/icons/Icon-Star-full.png" },
+  { img1: "./images/icons/Icon-Star-full.png", img2: "./images/icons/Icon-Star-full.png", img3: "./images/icons/Icon-Star-full.png", img4: "./images/icons/Icon-Star-full.png", img5: "./images/icons/Icon-Star-full.png" }
 ]
 
 export function Filter(props) {
@@ -106,10 +114,12 @@ export function Filter(props) {
     document.getElementById(props.filter).classList.remove(dropdown);
   }
   
+
+
   return <div id={props.filter} className={props.style + " filter closed"}>
     <div className='dropdown-container'><h2>{props.filter}</h2><button onClick={HandleDropdown}><img src='./images/icons/Arrow_up.png' /></button></div>
     <div id='filter-dropdown'>
-      <div className={props.style+" SearchContainer"}>
+      <div className={props.style + " SearchContainer"}>
         <button className="search-btn"><img src='./images/icons/search-Icon.png' /></button>
         <input
           className="search-bar"
@@ -117,13 +127,13 @@ export function Filter(props) {
           type="text"
         />
       </div>
-      <div className={props.style+' SliderContainer'}>
-        <div class="slider-track"></div>
-        <input id='FromSlider' type='range' value="30" min="0" max="250"></input>
-        <input id='ToSlider' type='range' value="30" min="0" max="250"></input>
+      <div className={props.style + ' SliderContainer'}>
+        <div class="sliderTrack"></div>
+        <input id='FromSlider' type='range'  min="0" max="250"></input>
+        <input id='ToSlider' type='range'  min="0" max="250"></input>
       </div>
-      <ul className={props.style+'Checkbox'}>
-        {props.options.map(elem => <li><label for={elem.name}><input type='checkbox' id={elem.name}></input><span className="checkmark"></span><p>{elem.name}</p></label></li>)}
+      <ul className={props.style + 'Checkbox'}>
+        {props.options.map(elem => <li><label for={elem.name}><input type='checkbox' id={elem.name}></input><span className="checkmark"></span><p className={props.style}>{elem.name}</p><span id='stars'><img src={elem.img1}/><img src={elem.img2}/><img src={elem.img3}/><img src={elem.img4}/><img src={elem.img5}/></span></label></li>)}
       </ul>
     </div>
   </div>
@@ -136,6 +146,7 @@ export function ProductListFiltersAside(props) {
     <Filter filter="Size" style="grid" options={sizes} />
     <Filter filter="Color" style="list" options={colors} />
     <Filter filter="Price" style="range" options={colors} />
+    <Filter filter="Customer reviews" style="imageList" options={reviews} />
   </div>
 }
 
