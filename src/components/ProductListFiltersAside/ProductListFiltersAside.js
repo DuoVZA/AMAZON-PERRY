@@ -99,10 +99,10 @@ const colors = [
 
 const reviews = [
   { img1: "./images/icons/Icon-Star-full.png", img2: "./images/icons/Icon-Star-full.png", img3: "./images/icons/Icon-Star-full.png", img4: "./images/icons/Icon-Star-full.png", img5: "./images/icons/Icon-Star-full.png" },
-  { img1: "./images/icons/Icon-Star-full.png", img2: "./images/icons/Icon-Star-full.png", img3: "./images/icons/Icon-Star-full.png", img4: "./images/icons/Icon-Star-full.png", img5: "./images/icons/Icon-Star-full.png" },
-  { img1: "./images/icons/Icon-Star-full.png", img2: "./images/icons/Icon-Star-full.png", img3: "./images/icons/Icon-Star-full.png", img4: "./images/icons/Icon-Star-full.png", img5: "./images/icons/Icon-Star-full.png" },
-  { img1: "./images/icons/Icon-Star-full.png", img2: "./images/icons/Icon-Star-full.png", img3: "./images/icons/Icon-Star-full.png", img4: "./images/icons/Icon-Star-full.png", img5: "./images/icons/Icon-Star-full.png" },
-  { img1: "./images/icons/Icon-Star-full.png", img2: "./images/icons/Icon-Star-full.png", img3: "./images/icons/Icon-Star-full.png", img4: "./images/icons/Icon-Star-full.png", img5: "./images/icons/Icon-Star-full.png" }
+  { img1: "./images/icons/Icon-Star-full.png", img2: "./images/icons/Icon-Star-full.png", img3: "./images/icons/Icon-Star-full.png", img4: "./images/icons/Icon-Star-full.png", img5: "./images/icons/Icon-Star-empty.png" },
+  { img1: "./images/icons/Icon-Star-full.png", img2: "./images/icons/Icon-Star-full.png", img3: "./images/icons/Icon-Star-full.png", img4: "./images/icons/Icon-Star-empty.png", img5: "./images/icons/Icon-Star-empty.png" },
+  { img1: "./images/icons/Icon-Star-full.png", img2: "./images/icons/Icon-Star-full.png", img3: "./images/icons/Icon-Star-empty.png", img4: "./images/icons/Icon-Star-empty.png", img5: "./images/icons/Icon-Star-empty.png" },
+  { img1: "./images/icons/Icon-Star-full.png", img2: "./images/icons/Icon-Star-empty.png", img3: "./images/icons/Icon-Star-empty.png", img4: "./images/icons/Icon-Star-empty.png", img5: "./images/icons/Icon-Star-empty.png" }
 ]
 
 export function Filter(props) {
@@ -113,9 +113,29 @@ export function Filter(props) {
     document.getElementById(props.filter).classList.add(value);
     document.getElementById(props.filter).classList.remove(dropdown);
   }
-  
 
+  const [slider, setSlider] = React.useState({ from: "12", to: "100" });
+  function slideOne(e) {
+    setSlider({ from: e, to: slider.to });
+    if (parseInt(slider.to) - parseInt(e) <= 5) {
+      setSlider({ from: parseInt(slider.to) - 5, to: slider.to });
+    }
+    fillColor();
+  }
 
+  function slideTwo(e) {
+    setSlider({ from: slider.from, to: e })
+    if (parseInt(slider.to) - parseInt(e) <= 5) {
+      setSlider({ from: slider.from, to: parseInt(slider.from) + 5 })
+    }
+    fillColor();
+  }
+
+  function fillColor() {
+    let percent1 = (parseInt(slider.from) / 250) * 100;
+    let percent2 = (parseInt(slider.to) / 250) * 100;
+    document.querySelector(".sliderTrack").style.background = "red";
+  }
   return <div id={props.filter} className={props.style + " filter closed"}>
     <div className='dropdown-container'><h2>{props.filter}</h2><button onClick={HandleDropdown}><img src='./images/icons/Arrow_up.png' /></button></div>
     <div id='filter-dropdown'>
@@ -128,12 +148,22 @@ export function Filter(props) {
         />
       </div>
       <div className={props.style + ' SliderContainer'}>
-        <div class="sliderTrack"></div>
-        <input id='FromSlider' type='range'  min="0" max="250"></input>
-        <input id='ToSlider' type='range'  min="0" max="250"></input>
+        <div class="form_control">
+          <div class="form_control_container">
+            <input class="form_control_container__time__input" type="number" id="fromInput" value={slider.from} min="0" max="100" />
+          </div>
+          <div class="form_control_container">
+            <input class="form_control_container__time__input" type="number" id="toInput" value={slider.to} min="0" max="100" />
+          </div>
+        </div>
+        <div className='wrapper'>
+          <input id='FromSlider' type='range' min="0" max="250" onInput={fillColor} />
+          <input id='ToSlider' type='range' min="0" max="250" onInput={fillColor} />
+          <div class="sliderTrack"></div>
+        </div>
       </div>
       <ul className={props.style + 'Checkbox'}>
-        {props.options.map(elem => <li><label for={elem.name}><input type='checkbox' id={elem.name}></input><span className="checkmark"></span><p className={props.style}>{elem.name}</p><span id='stars'><img src={elem.img1}/><img src={elem.img2}/><img src={elem.img3}/><img src={elem.img4}/><img src={elem.img5}/></span></label></li>)}
+        {props.options.map(elem => <li><label for={elem.name}><input type='checkbox' id={elem.name}></input><span className="checkmark"></span><p className={props.style}>{elem.name}</p><span id='stars'><img src={elem.img1} /><img src={elem.img2} /><img src={elem.img3} /><img src={elem.img4} /><img src={elem.img5} /></span></label></li>)}
       </ul>
     </div>
   </div>

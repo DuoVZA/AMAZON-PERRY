@@ -9,7 +9,8 @@
     margin: 8px;
 }
 
-.filter.open {
+.list.filter.open,
+.grid.filter.open {
     height: 416px;
 }
 
@@ -145,17 +146,20 @@ label input:checked~.checkmark {
     border: none;
 }
 
-.list .checkmark:after, .imageList .checkmark:after {
+.list .checkmark:after,
+.imageList .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
 
-.list label input:checked~.checkmark:after, .imageList label input:checked~.checkmark:after {
+.list label input:checked~.checkmark:after,
+.imageList label input:checked~.checkmark:after {
     display: block;
 }
 
-.list label .checkmark:after, .imageList label .checkmark:after {
+.list label .checkmark:after,
+.imageList label .checkmark:after {
     left: 5.5px;
     top: 1.5px;
     width: 4px;
@@ -221,11 +225,13 @@ label input:checked~.checkmark {
 .list.SliderContainer,
 .grid.SliderContainer,
 .imageList.SliderContainer,
-p.imageList {
+p.imageList,
+.imageList.SearchContainer,
+.range.SearchContainer {
     display: none;
 }
 
-.slider.open {
+.range.filter.open {
     height: 160px;
 }
 
@@ -259,6 +265,56 @@ p.imageList {
     opacity: 0;
 }
 
+.SliderContainer .wrapper {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
+.SliderContainer .sliderTrack {
+    width: 100%;
+    height: 5px;
+    background-color: #d1d5db;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 5px;
+}
+
+.SliderContainer input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    outline: none;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.SliderContainer input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    height: 5px;
+}
+
+.SliderContainer input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: #3b82f6;
+    cursor: pointer;
+    border-radius: 50%;
+    pointer-events: auto;
+    margin-top: -8px;
+    box-shadow: 0 0 0 3px #fff, 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
 .imageListCheckbox label {
     display: flex;
 }
@@ -273,6 +329,13 @@ p.imageList {
     align-items: center;
     align-self: flex-start;
 }
-.imageListCheckbox {
+
+.imageList.filter.open {
     height: 240px;
+}
+
+.filter.imageList.open ul {
+    margin: 12px 0;
+    height: 144px;
+    overflow-y: hidden;
 }
