@@ -11,33 +11,76 @@ export default function Main({ onOpenLogin }) {
         <Add />
 
         <section className="products-section">
-          <CategorySlider categories="first"/>
+          <CategorySlider categories="first" />
         </section>
 
         <div className="line"></div>
 
         <section className="products-section1">
-          <h2>Trending Deals</h2>
-          {/* <a><p>See all</p></a> */}
-          <ProductSlider categories="trending"/>
+          <div className="head">
+            <h2>Trending Deals</h2>
+
+            <a href="" className="see_all">
+              <p>See all</p>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="rgba(74, 123, 217, 1)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <ProductSlider categories="trending" />
         </section>
 
         <div className="line1"></div>
 
         <section className="products-section">
-          <CategorySlider categories="second"/>
+          <CategorySlider categories="second" />
         </section>
 
         <div className="line"></div>
 
         <section className="products-section1">
-          <h2>Sales</h2>
-          <ProductSlider categories="sales"/>
+          <div className="head">
+            <h2>Sales</h2>
+            <a href="" className="see_all">
+              <p>See all</p>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="rgba(74, 123, 217, 1)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <ProductSlider categories="sales" />
         </section>
 
         <div className="line1"></div>
 
-        <LogSignBar imageSrc="/images/banners/Banner-LoginSignup-Desktop.png" onOpenLogin={onOpenLogin}/>
+        <LogSignBar
+          imageSrc="/images/banners/Banner-LoginSignup-Desktop.png"
+          onOpenLogin={onOpenLogin}
+        />
       </div>
     </main>
   );
