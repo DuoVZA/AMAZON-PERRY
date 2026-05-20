@@ -1,1 +1,28 @@
-.ProductListMain {}
+.ProductListMain {
+    padding: 0 160px;
+}
+
+.CategoryName {
+    font-family: Mulish;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -2%;
+    color: #0E2042;
+}
+
+.wrapper {
+    display: flex;
+}
+
+#CardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ProductCard-small{
+    margin: 8px;
+}
+.ProductCard-big {
+    margin: 12px;
+}

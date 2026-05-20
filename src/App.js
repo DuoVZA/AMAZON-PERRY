@@ -24,7 +24,7 @@ function App() {
       />
 
       <Routes>
-        <Route path="/ProductList" element={<ProductListMain />} />
+        <Route path="/ProductList" element={<ProductListMain category="Dresses" />} />
       </Routes>
 
       <Footer/>
