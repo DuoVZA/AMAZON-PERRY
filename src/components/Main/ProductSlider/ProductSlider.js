@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import './ProductSlider.css';
 import ProductCard from './ProductCard/ProductCard';
 
@@ -23,25 +23,35 @@ const productsDataReversed = [...productsData].reverse();
 
 export default function ProductSlider({ categories = 'trending' }) {
   const sliderRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      const width = window.visualViewport?.width ?? window.innerWidth;
+      setIsMobile(Math.round(width) <= 395);
+    };
+    checkMobile();
+    window.visualViewport?.addEventListener("resize", checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => {
+      window.visualViewport?.removeEventListener("resize", checkMobile);
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
 
   const goToPrev = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: -300, behavior: 'smooth' });
-    }
+    if (sliderRef.current) sliderRef.current.scrollBy({ left: -300, behavior: 'smooth' });
   };
 
   const goToNext = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: 300, behavior: 'smooth' });
-    }
+    if (sliderRef.current) sliderRef.current.scrollBy({ left: 300, behavior: 'smooth' });
   };
 
-  // Выбираем данные в зависимости от пропса categories
   const data = categories === 'trending' ? productsData : productsDataReversed;
 
   return (
     <div className="slider-wrapper1">
-      <div id="container1" ref={sliderRef}>
+      <div id="container1" className={isMobile ? 'mobile-grid' : ''} ref={sliderRef}>
         {data.map((elem, index) => (
           <ProductCard
             key={index}
@@ -60,17 +70,20 @@ export default function ProductSlider({ categories = 'trending' }) {
         ))}
       </div>
 
-      <button className="arr-btn2 arr-left1" onClick={goToPrev}>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 18L9 12L15 6" stroke="rgba(74, 123, 217, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      </button>
-
-      <button className="arr-btn2 arr-right1" onClick={goToNext}>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 18L15 12L9 6" stroke="rgba(74, 123, 217, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      </button>
+      {!isMobile && (
+        <>
+          <button className="arr-btn2 arr-left1" onClick={goToPrev}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M15 18L9 12L15 6" stroke="rgba(74, 123, 217, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+          <button className="arr-btn2 arr-right1" onClick={goToNext}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M9 18L15 12L9 6" stroke="rgba(74, 123, 217, 1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        </>
+      )}
     </div>
   );
 }

@@ -7,6 +7,7 @@ const ICONS = {
       width={81.68}
       height={20.06}
       alt="PERRY"
+      className="Logo"
     />
   ),
   user: (
@@ -15,10 +16,11 @@ const ICONS = {
       width={24}
       height={24}
       alt="Account"
+      className="User"
     />
   ),
   cart: (
-    <img src="/images/icons/cart-Icon.png" width={24} height={24} alt="Cart" />
+    <img src="/images/icons/cart-Icon.png" width={24} height={24} alt="Cart" className="Cart" />
   ),
   search: (
     <img
@@ -26,6 +28,7 @@ const ICONS = {
       width={24}
       height={24}
       alt="Search"
+      className="Search"
     />
   ),
 };

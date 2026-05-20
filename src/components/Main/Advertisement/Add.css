@@ -148,40 +148,21 @@
 }
 
 /* ─── Адаптация под мобильные ─────────────────────────────────────── */
-@media (max-width: 768px) {
+@media (min-width: 300px) and (max-width: 393px) {
   .banner-container {
     width: 100%;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
   }
-  
+
+  .banner-image {
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
+  }
+
   .arrow-btn {
-    width: 32px;
-    height: 32px;
-  }
-
-  .arrow-btn svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .arrow-left {
-    left: 8px;
-  }
-
-  .arrow-right {
-    right: 8px;
-  }
-
-  .dots {
-    bottom: 8px;
-    gap: 6px;
-  }
-
-  .dot {
-    width: 6px;
-    height: 6px;
-  }
-
-  .dot.active {
-    width: 16px;
+    display: none;
   }
 }

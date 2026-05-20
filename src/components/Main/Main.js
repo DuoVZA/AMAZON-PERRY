@@ -40,6 +40,7 @@ export default function Main({ onOpenLogin }) {
             </a>
           </div>
           <ProductSlider categories="trending" />
+          <a href="" className="see_all_btn">See all</a>
         </section>
 
         <div className="line1"></div>
@@ -73,12 +74,14 @@ export default function Main({ onOpenLogin }) {
             </a>
           </div>
           <ProductSlider categories="sales" />
+          <a href="" className="see_all_btn">See all</a>
         </section>
 
         <div className="line1"></div>
 
         <LogSignBar
           imageSrc="/images/banners/Banner-LoginSignup-Desktop.png"
+          mobileImageSrc="/images/banners/Banner-LoginSignup-Mobile.png"
           onOpenLogin={onOpenLogin}
         />
       </div>

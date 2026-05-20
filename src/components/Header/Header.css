@@ -13,7 +13,7 @@
   z-index: 100;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   width: 100%;
-  max-width: 1920px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -70,6 +70,7 @@
 }
 
 .search-bar {
+  display: flex;
   flex: 1;
   border: none;
   padding: 0 14px;
@@ -102,3 +103,33 @@
 }
 
 .icon-btn:hover { background: rgba(255,255,255,0.15); }
+
+/* Адаптив */
+@media (max-width: 391px) {
+  .header {
+    padding: 0 12px;
+    gap: 8px;
+  }
+
+  .Search {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .User {
+    display: none;
+  }
+
+  .Cart {
+    width: 20px;
+    height: 20px;
+  }
+
+  .search-container {
+    margin-left: 8px;
+  }
+}

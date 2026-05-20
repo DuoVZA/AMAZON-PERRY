@@ -25,7 +25,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router className="App">
       <Header
         onBurgerClick={() => setMenuOpen(true)}
         onLogSignClick={() => handleOpenLogin("login")}

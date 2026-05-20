@@ -51,7 +51,7 @@
     transition: all 0.3s ease;
     z-index: 10;
     backdrop-filter: blur(4px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .arr-btn2:hover {
@@ -94,5 +94,19 @@
 
     .arr-right1 {
         right: -30px;
+    }
+
+    .slider-wrapper1 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #container1.mobile-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        overflow-x: visible !important;
+        scroll-snap-type: none !important;
+        gap: 8px;
+        padding: 0 12px;
     }
 }
