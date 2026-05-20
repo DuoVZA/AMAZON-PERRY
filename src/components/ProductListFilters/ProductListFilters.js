@@ -1,11 +1,19 @@
 import './ProductListFilters.css';
+import { useState, createContext, useContext } from "react";
+import { LayoutContext } from "../ProductListMain/ProductListMain";
 
 
 export function ProductListFilters() {
+  const { layout, setLayout } = useContext(LayoutContext);
+
+  function handleChange(e) {
+    let value = (e.target.checked ? "ProductCard-small" : "ProductCard-big");
+    setLayout(value);
+  }
   return (
     <div className="ProductListFilters">
       <div class="dropdown">
-        <button class="appliedFilters">10 filters applied <img src='./images/icons/Arrow_Up.png' /></button>
+        <button class="appliedFilters">10 filters applied <img src='./images/icons/Arrow_Up.png' onClick={add = (a, b) => {return a + b;}} /></button>
         <div class="dropdown-content">
           <div>
             <span><p>PUMIEY</p> <img src='./images/icons/Close.png' /></span>
@@ -23,18 +31,18 @@ export function ProductListFilters() {
           <p>Clear all</p>
         </div>
       </div>
-      <div>
-      <select name="sort" id="sort">
-        <option value="ByRating" >By rating</option>
-        <option value="Novelty" >Novelty</option>
-        <option value="CheapToExpensive" >Cheap to expensive</option>
-        <option value="ExpensiveToCheap" >Expensive to cheap</option>
-      </select>
+      <div className='layoutFilters'>
+        <select name="sort" id="sort">
+          <option value="ByRating" >By rating</option>
+          <option value="Novelty" >Novelty</option>
+          <option value="CheapToExpensive" >Cheap to expensive</option>
+          <option value="ExpensiveToCheap" >Expensive to cheap</option>
+        </select>
         <div class="switchContainer">
           <img id="product3" src='./images/icons/Product quantity-3.png' />
           <img id="product5" src='./images/icons/Product quantity-5.png' />
           <label class="switch">
-            <input type="checkbox" />
+            <input type="checkbox" onChange={handleChange} />
             <span class="slider"></span>
           </label>
         </div>
