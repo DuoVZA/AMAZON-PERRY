@@ -1,5 +1,6 @@
 .ProductListMain {
     padding: 0 160px;
+    margin-top: 40px;
 }
 
 .CategoryName {
@@ -9,24 +10,31 @@
     line-height: 48px;
     letter-spacing: -2%;
     color: #0E2042;
+    margin: 13px 0 32px 0;
 }
 
 .wrapper {
     display: flex;
+    gap: 24px;
 }
 
-#CardsContainer {
+.CardsContainer {
     display: flex;
     flex-wrap: wrap;
+    gap: 16px;
 }
 
-.ProductCard-small{
-    margin: 8px;
-}
-.ProductCard-big {
-    margin: 12px;
+.CardsContainer.big {
+    gap: 24px;
 }
 
 .mainContainer {
-    margin: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mainContainer hr {
+    border-top: 2.5px solid #CCDDFF;
+    margin: 0 0 16px 0;
 }

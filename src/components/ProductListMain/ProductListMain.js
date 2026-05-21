@@ -3,17 +3,16 @@ import { ProductCard } from '../ProductCard/ProductCard';
 import { ProductListFiltersAside } from '../ProductListFiltersAside/ProductListFiltersAside';
 import { ProductListFilters } from '../ProductListFilters/ProductListFilters';
 import { createContext, useState, useEffect } from 'react';
-
+import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs'
 
 
 export const LayoutContext = createContext();
 
 export function ProductListMain(props) {
-  
-  const [layout, setLayout] = useState("ProductCard-big");
 
+  const [layout, setLayout] = useState("ProductCard-big");
   useEffect(() => {
-    console.log(layout);
+    document.querySelector(".CardsContainer").classList.toggle("big")
   }, [layout]);
 
   let products = [
@@ -33,12 +32,14 @@ export function ProductListMain(props) {
   ]
   return (<LayoutContext.Provider value={{ layout, setLayout }}>
     <div className="ProductListMain">
+      <Breadcrumbs />
       <h2 className='CategoryName'>{props.category}</h2>
       <div className='wrapper'>
         <ProductListFiltersAside />
         <div className='mainContainer'>
           <ProductListFilters />
-          <div id='CardsContainer'>
+          <hr />
+          <div className='CardsContainer big'>
             {products.map(elem => <ProductCard item={elem} ></ProductCard>)}
           </div>
         </div>

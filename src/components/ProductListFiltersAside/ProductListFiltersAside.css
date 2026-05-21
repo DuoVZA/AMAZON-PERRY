@@ -1,3 +1,9 @@
+.ProductListFiltersAside {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .filter {
     width: 382px;
     height: 76px;
@@ -6,7 +12,6 @@
     transition: 0.5s;
     box-shadow: 0px 4px 11.5px -5px #2050AD40;
     background-color: #F4FAFF;
-    margin: 8px 0;
 }
 
 .list.filter.open,

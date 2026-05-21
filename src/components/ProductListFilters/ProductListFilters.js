@@ -10,10 +10,17 @@ export function ProductListFilters() {
     let value = (e.target.checked ? "ProductCard-small" : "ProductCard-big");
     setLayout(value);
   }
+
+  function showDropdown()
+  {
+    document.querySelector(".dropdown-content").classList.toggle("show");
+  }
+
+
   return (
     <div className="ProductListFilters">
       <div class="dropdown">
-        <button class="appliedFilters">10 filters applied <img src='./images/icons/Arrow_Up.png' onClick={add = (a, b) => {return a + b;}} /></button>
+        <button class="appliedFilters" onClick={showDropdown}>10 filters applied <img src='./images/icons/Arrow_Up.png' /></button>
         <div class="dropdown-content">
           <div>
             <span><p>PUMIEY</p> <img src='./images/icons/Close.png' /></span>

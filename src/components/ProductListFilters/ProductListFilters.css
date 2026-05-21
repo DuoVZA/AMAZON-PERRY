@@ -89,7 +89,7 @@ hr {
     background-color: #f1f1f1
 }
 
-.dropdown-content {
+.dropdown-content.show {
     display: block;
 }
 
