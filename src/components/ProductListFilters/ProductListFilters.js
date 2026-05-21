@@ -8,7 +8,8 @@ export function ProductListFilters() {
 
   function handleChange(e) {
     let value = (e.target.checked ? "ProductCard-small" : "ProductCard-big");
-    setLayout(value);
+    let countValue = (e.target.checked ? 30 : 12);
+    setLayout({ size: value, count: countValue });
   }
 
   function showDropdown()

@@ -1,0 +1,40 @@
+.ProductCardsContainer {}
+
+.pageNumbersContainer {
+    display: flex;
+    gap: 12px;
+    margin: 24px;
+}
+
+.pageNumbersContainer button {
+    background: none;
+    border: none;
+    color: #0E2042;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: Mulish;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 2%;
+    cursor: pointer;
+}
+
+.pageNumbersContainer button:hover {
+    background: #E0EBFF;
+}
+
+.pageNumbersContainer button:active {
+    background: #CCDDFF;
+}
+
+.pageNumbersContainer button.current {
+    background: #B8EA48;
+}
+.pageNumbersContainer button:disabled {
+    opacity: 0.5;
+}
+.pageNumbersContainer #nextBTN {
+    rotate: 180deg;
+}
