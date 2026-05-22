@@ -14,24 +14,24 @@ export function ProductCardsContainer(props) {
   }
   return (
     <div className='ProductCardsContainer'>
-    <div className='CardsContainer big'>
-      {currentItems.map(elem => <ProductCard item={elem} ></ProductCard>)}
-    </div>
-    <div className='pageNumbersContainer'>
+      <div className='CardsContainer big'>
+        {currentItems.map(elem => <ProductCard item={elem} ></ProductCard>)}
+      </div>
+      <div className='pageNumbersContainer'>
         <button id='previousBTN' disabled={currentPage === 1} onClick={() => setCurrentPage(prev => prev - 1)}>
-          <img src='./images/icons/Arrow_Left.png'/>
+          <img src='./images/icons/Arrow_Left.png' />
         </button>
         {pageNumbers.map((number) => (
           <a className="pageNumber" key={number}>
-            <button className={currentPage===number?"current":""} onClick={() => setCurrentPage(number)}>
+            <button className={currentPage === number ? "current" : ""} onClick={() => setCurrentPage(number)}>
               {number}
             </button>
           </a>
         ))}
-      <button disabled={currentPage === totalPages} onClick={() => setCurrentPage(prev => prev + 1)}>
-          <img id='nextBTN' src='./images/icons/Arrow_Left.png'/>
+        <button disabled={currentPage === totalPages} onClick={() => setCurrentPage(prev => prev + 1)}>
+          <img id='nextBTN' src='./images/icons/Arrow_Left.png' />
         </button>
       </div>
-      </div>
+    </div>
   );
 }

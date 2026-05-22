@@ -344,3 +344,26 @@ p.imageList,
     height: 144px;
     overflow-y: hidden;
 }
+#filterBTN {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+@media (min-width: 320px) and (max-width: 1024px) {
+    .ProductListFiltersAside {
+        display: none;
+    }
+    #filterBTN {
+        display: block;
+    }
+
+}
+
+@media (min-width: 1025px) {
+    .ProductListFiltersAside {
+        display: flex;
+    }
+    #filterBTN {
+        display: none;
+    }
+}

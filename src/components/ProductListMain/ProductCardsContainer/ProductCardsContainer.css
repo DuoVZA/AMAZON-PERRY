@@ -1,4 +1,4 @@
-.ProductCardsContainer {}
+/* .ProductCardsContainer {} */
 
 .pageNumbersContainer {
     display: flex;
@@ -32,9 +32,34 @@
 .pageNumbersContainer button.current {
     background: #B8EA48;
 }
+
 .pageNumbersContainer button:disabled {
     opacity: 0.5;
 }
+
 .pageNumbersContainer #nextBTN {
     rotate: 180deg;
+}
+
+
+@media (min-width: 320px) and (max-width: 1024px) {
+.CardsContainer, .CardsContainer.big {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+}
+
+@media (min-width: 1025px) {
+.CardsContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.CardsContainer.big {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
 }

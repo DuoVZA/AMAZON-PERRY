@@ -18,16 +18,6 @@
     gap: 24px;
 }
 
-.CardsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.CardsContainer.big {
-    gap: 24px;
-}
-
 .mainContainer {
     display: flex;
     flex-direction: column;
@@ -37,4 +27,19 @@
 .mainContainer hr {
     border-top: 2.5px solid #CCDDFF;
     margin: 0 0 16px 0;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+    .ProductListMain {
+        padding: 0 16px;
+        margin: 24px 0 40px;
+    }
+
+}
+
+@media (min-width: 1025px) {
+    .ProductListMain {
+        padding: 0 160px;
+        margin: 40px 0;
+    }
 }

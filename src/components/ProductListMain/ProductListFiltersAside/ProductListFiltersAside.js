@@ -170,13 +170,16 @@ export function Filter(props) {
 }
 
 export function ProductListFiltersAside(props) {
-  return <div className="ProductListFiltersAside">
-    <Filter filter="Brand" style="list" options={brands} />
-    <Filter filter="Fabric type" style="list" options={fabricTypes} />
-    <Filter filter="Size" style="grid" options={sizes} />
-    <Filter filter="Color" style="list" options={colors} />
-    <Filter filter="Price" style="range" options={colors} />
-    <Filter filter="Customer reviews" style="imageList" options={reviews} />
+  return <div>
+    <button id='filterBTN'><img src='./images/icons/Filter.png'/></button>
+    <div className="ProductListFiltersAside">
+      <Filter filter="Brand" style="list" options={brands} />
+      <Filter filter="Fabric type" style="list" options={fabricTypes} />
+      <Filter filter="Size" style="grid" options={sizes} />
+      <Filter filter="Color" style="list" options={colors} />
+      <Filter filter="Price" style="range" options={colors} />
+      <Filter filter="Customer reviews" style="imageList" options={reviews} />
+    </div>
   </div>
 }
 
