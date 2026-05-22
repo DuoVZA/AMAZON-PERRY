@@ -1,7 +1,7 @@
 import './ProductCardsContainer.css';
-import { ProductCard } from '../ProductCard/ProductCard';
+import { ProductCard } from '../../ProductCard/ProductCard';
 import { useState, createContext, useContext } from "react";
-import { LayoutContext } from "../ProductListMain/ProductListMain";
+import { LayoutContext } from "../ProductListMain";
 
 export function ProductCardsContainer(props) {
   const { layout, setLayout } = useContext(LayoutContext);

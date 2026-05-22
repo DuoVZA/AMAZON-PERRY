@@ -1,9 +1,8 @@
 import './ProductListMain.css';
-import { ProductCard } from '../ProductCard/ProductCard';
-import { ProductListFiltersAside } from '../ProductListFiltersAside/ProductListFiltersAside';
-import { ProductListFilters } from '../ProductListFilters/ProductListFilters';
-import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs';
-import { ProductCardsContainer } from '../ProductCardsContainer/ProductCardsContainer';
+import { ProductListFiltersAside } from './ProductListFiltersAside/ProductListFiltersAside';
+import { ProductListFilters } from './ProductListFilters/ProductListFilters';
+import { Breadcrumbs } from './Breadcrumbs/Breadcrumbs'
+import { ProductCardsContainer } from './ProductCardsContainer/ProductCardsContainer';
 import { createContext, useState, useEffect } from 'react';
 
 export const LayoutContext = createContext();
@@ -28,7 +27,7 @@ export function ProductListMain(props) {
     { size: layout.size, unavailable: "available", wishlist: "hide", sale: "hide", discount: "-17%", img: './images/products/6e2e55f0bddfdf51465db90fded8480f8149ec66.jpg', name: "SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel", stars: "4", comments: "1547", oldPrice: "$14.20", price: "18", priceCents: "99" },
     { size: layout.size, unavailable: "available", wishlist: "hide", sale: "hide", discount: "-17%", img: './images/products/5c0e58f4179c3c2ab317b32e58e25b73f23e2895.jpg', name: "SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel", stars: "4", comments: "1547", oldPrice: "$14.20", price: "18", priceCents: "99" },
     { size: layout.size, unavailable: "available", wishlist: "hide", sale: "hide", discount: "-17%", img: './images/products/2b594c2c74dc36e04df4fac38b77619bd72cd3f7.jpg', name: "SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel", stars: "4", comments: "1547", oldPrice: "$14.20", price: "18", priceCents: "99" },
-    
+
     { size: layout.size, unavailable: "available", wishlist: "hide", sale: "hide", discount: "-17%", img: './images/products/1-9c028951538772dda4ff34723f872520baac21c0.jpg', name: "SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel", stars: "4", comments: "1547", oldPrice: "$14.20", price: "18", priceCents: "99" },
     { size: layout.size, unavailable: "available", wishlist: "hide", sale: "hide", discount: "-17%", img: './images/products/2-4ef469284aa6c97b9a2a03c0589af80744130eb2.jpg', name: "SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel", stars: "4", comments: "1547", oldPrice: "$14.20", price: "18", priceCents: "99" },
     { size: layout.size, unavailable: "available", wishlist: "hide", sale: "hide", discount: "-17%", img: './images/products/3-6c8e0fe92ef2de57eedd7ff9b83d00e2375ad5c3.jpg', name: "SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel", stars: "4", comments: "1547", oldPrice: "$14.20", price: "18", priceCents: "99" },

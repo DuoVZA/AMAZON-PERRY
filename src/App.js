@@ -7,9 +7,9 @@ import Header from "./components/Header/Header";
 import MenuBar from "./components/MenuBar/MenuBar";
 import Footer from "./components/Footer/Footer";
 import {ProductListMain} from "./components/ProductListMain/ProductListMain";
-import ProductListFilters from "./components/ProductListFilters/ProductListFilters";
-import ProductListFiltersAside from "./components/ProductListFiltersAside/ProductListFiltersAside";
-import Breadcrumbs from "./components/Breadcrumbs/Breadcrumbs";
+// import ProductListFilters from "./components/ProductListFilters/ProductListFilters";
+// import ProductListFiltersAside from "./components/ProductListFiltersAside/ProductListFiltersAside";
+// import Breadcrumbs from "./components/Breadcrumbs/Breadcrumbs";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
