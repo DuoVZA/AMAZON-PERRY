@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./MenuBar.css";
 
@@ -32,126 +32,68 @@ const CATALOG_OPTIONS = [
 ];
 
 export default function MenuBar({ isOpen, onClose, onOpenLogin }) {
-  // Добавляем onOpenLogin
   const navigate = useNavigate();
   const [isCatalogOpen, setIsCatalogOpen] = useState(false);
+  const drawerRef = useRef(null);
 
-  const handleClick = (path) => {
-    navigate(path);
-    onClose();
-  };
-
-  const handleCatalogClick = () => {
-    setIsCatalogOpen(!isCatalogOpen);
-  };
-
-  const handleOptionClick = (option) => {
-    console.log("Selected category:", option);
-    setIsCatalogOpen(false);
-    onClose();
-  };
-
-  const handleSignUp = () => {
-    onClose();
-    onOpenLogin("signup"); // Открываем модалку с режимом signup
-  };
-
-  const handleLogIn = () => {
-    onClose();
-    onOpenLogin("login"); // Открываем модалку с режимом login
-  };
+  const handleClick = (path) => { navigate(path); onClose(); };
+  const handleCatalogClick = () => setIsCatalogOpen(!isCatalogOpen);
+  const handleOptionClick = (option) => { setIsCatalogOpen(false); onClose(); };
+  const handleSignUp = () => { onClose(); onOpenLogin('signup'); };
+  const handleLogIn = () => { onClose(); onOpenLogin('login'); };
 
   return (
     <>
       <div className={`overlay ${isOpen ? "visible" : ""}`} onClick={onClose} />
 
-      <aside className={`drawer ${isOpen ? "open" : ""}`}>
-        <button className="drawer-close" onClick={onClose}>
-          ✕
-        </button>
+      <aside
+        ref={drawerRef}
+        className={`drawer ${isOpen ? "open" : ""}`}
+      >
 
-        <div className="drawer-profile"></div>
+        {/* Крестик */}
+        <button className="drawer-close" onClick={onClose}>✕</button>
+
         <div className="drawer-profile">
-          {/* ── Пузырёк ── */}
           <div className="bubble">
-            <img
-              src="/images/icons/capla.png"
-              width={33}
-              height={25}
-              alt=""
-              style={{ marginTop: "15px", marginLeft: "8px" }}
-            />
+            <img src="/images/icons/capla.png" width={33} height={25} alt="" style={{marginTop: "15px", marginLeft: "8px"}} />
           </div>
-
           <div className="profile-info">
             <div className="profile-name">{USER.name}</div>
-            <div className="profile-message">
-              Log in to enjoy a more pleasant experience
-            </div>
+            <div className="profile-message">Log in to enjoy a more pleasant experience</div>
           </div>
         </div>
 
         <div className="auth-buttons">
-          <button className="signup-btn" onClick={handleSignUp}>
-            Sign up
-          </button>
-          <button className="login-btn" onClick={handleLogIn}>
-            Log in
-          </button>
+          <button className="signup-btn" onClick={handleSignUp}>Sign up</button>
+          <button className="login-btn" onClick={handleLogIn}>Log in</button>
         </div>
 
         <nav className="drawer-nav">
           <div className="nav-item-wrapper">
-            <button
-              className={`nav-item ${isCatalogOpen ? "active" : ""}`}
-              onClick={handleCatalogClick}
-            >
+            <button className={`nav-item ${isCatalogOpen ? "active" : ""}`} onClick={handleCatalogClick}>
               {ICONS.product} Product catalog
-              <span className="arrow-icon">
-                {isCatalogOpen ? ICONS.arrowUp : ICONS.arrowDown}
-              </span>
+              <span className="arrow-icon">{isCatalogOpen ? ICONS.arrowUp : ICONS.arrowDown}</span>
             </button>
-
             {isCatalogOpen && (
               <div className="catalog-submenu">
                 {CATALOG_OPTIONS.map((option, index) => (
-                  <button
-                    key={index}
-                    className="catalog-option"
-                    onClick={() => handleOptionClick(option.name)}
-                  >
-                    <img
-                      src={option.icon}
-                      width={28}
-                      height={28}
-                      alt={option.name}
-                      className="catalog-option-icon"
-                    />
+                  <button key={index} className="catalog-option" onClick={() => handleOptionClick(option.name)}>
+                    <img src={option.icon} width={28} height={28} alt={option.name} className="catalog-option-icon" />
                     {option.name}
                   </button>
                 ))}
-                <button
-                  className="catalog-option see-all"
-                  onClick={() => handleClick("/catalog")}
-                >
-                  See all
-                </button>
+                <button className="catalog-option see-all" onClick={() => handleClick("/catalog")}>See all</button>
               </div>
             )}
           </div>
-
           <button className="nav-item" onClick={() => handleClick("/help")}>
             {ICONS.help} Help & FAQ
           </button>
         </nav>
 
         <div className="drawer-footer">
-          <img
-            src="/images/icons/logo.png"
-            width={70}
-            height={20}
-            alt="PERRY"
-          />
+          <img src="/images/icons/logo.png" width={70} height={20} alt="PERRY" />
         </div>
       </aside>
     </>

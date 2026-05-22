@@ -35,6 +35,7 @@ function App() {
         isOpen={menuOpen}
         onClose={() => setMenuOpen(false)}
         onOpenLogin={handleOpenLogin}
+        
       />
 
       <MBFLS
