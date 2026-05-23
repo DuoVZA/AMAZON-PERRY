@@ -136,6 +136,7 @@ export function Filter(props) {
     let percent2 = (parseInt(slider.to) / 250) * 100;
     document.querySelector(".sliderTrack").style.background = "red";
   }
+
   return <div id={props.filter} className={props.style + " filter closed"}>
     <div className='dropdown-container'><h2>{props.filter}</h2><button onClick={HandleDropdown}><img src='./images/icons/Arrow_up.png' /></button></div>
     <div id='filter-dropdown'>
@@ -170,8 +171,14 @@ export function Filter(props) {
 }
 
 export function ProductListFiltersAside(props) {
+
+  function showFilters()
+  {
+    document.querySelector(".ProductListFiltersAside").classList.toggle("show");
+  }
+
   return <div>
-    <button id='filterBTN'><img src='./images/icons/Filter.png'/></button>
+    <button id='filterBTN' onClick={showFilters}><img src='./images/icons/Filter.png' /></button>
     <div className="ProductListFiltersAside">
       <Filter filter="Brand" style="list" options={brands} />
       <Filter filter="Fabric type" style="list" options={fabricTypes} />

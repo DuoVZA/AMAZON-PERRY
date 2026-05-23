@@ -49,14 +49,16 @@ export function ProductListMain(props) {
   ]
   return (<LayoutContext.Provider value={{ layout, setLayout }}>
     <div className="ProductListMain">
-      <Breadcrumbs />
-      <h2 className='CategoryName'>{props.category}</h2>
-      <div className='wrapper'>
-        <ProductListFiltersAside />
-        <div className='mainContainer'>
-          <ProductListFilters />
-          <hr />
-          <ProductCardsContainer products={products} />
+      <div id="center">
+        <Breadcrumbs />
+        <h2 className='CategoryName'>{props.category}</h2>
+        <div className='wrapper'>
+          <ProductListFiltersAside />
+          <div className='mainContainer'>
+            <ProductListFilters />
+            <hr />
+            <ProductCardsContainer products={products} />
+          </div>
         </div>
       </div>
     </div>

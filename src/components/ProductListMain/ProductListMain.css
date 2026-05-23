@@ -1,7 +1,8 @@
-.ProductListMain {
-    padding: 0 160px;
-    margin: 40px 0;
-}
+    .ProductListMain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
 .CategoryName {
     font-family: Mulish;
@@ -10,7 +11,7 @@
     line-height: 48px;
     letter-spacing: -2%;
     color: #0E2042;
-    margin: 13px 0 32px 0;
+    margin: 13px 0 32px;
 }
 
 .wrapper {
@@ -29,7 +30,7 @@
     margin: 0 0 16px 0;
 }
 
-@media (min-width: 320px) and (max-width: 1024px) {
+@media (min-width: 320px) and (max-width: 480px) {
     .ProductListMain {
         padding: 0 16px;
         margin: 24px 0 40px;
@@ -37,7 +38,40 @@
 
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 481px) and (max-width: 768px) {
+    .ProductListMain {
+        padding: 0 16px;
+        margin: 24px 0 40px;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .ProductListMain {
+        padding: 0 16px;
+        margin: 24px 0 40px;
+    }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .ProductListMain {
+        padding: 0 16px;
+        margin: 24px 0 40px;
+    }
+
+}
+
+
+@media (min-width: 1441px) and (max-width: 1919px) {
+    .ProductListMain {
+        padding: 0 16px;
+        margin: 24px auto 40px;
+    }
+
+}
+
+@media (min-width: 1920px) {
     .ProductListMain {
         padding: 0 160px;
         margin: 40px 0;

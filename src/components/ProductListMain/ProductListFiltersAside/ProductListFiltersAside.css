@@ -344,25 +344,106 @@ p.imageList,
     height: 144px;
     overflow-y: hidden;
 }
+
 #filterBTN {
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 @media (min-width: 320px) and (max-width: 1024px) {
     .ProductListFiltersAside {
-        display: none;
+        width: 100%;
+        background-color: #F4FAFF;
+        visibility: hidden;
+        position: fixed;
+        z-index: 1;
+        bottom: -600px;
+        animation: fadeout 0.5s;
+
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 12px;
+        padding-right: 16px;
+        padding-bottom: 24px;
+        padding-left: 16px;
+
+        overflow-y: scroll;
+
     }
+
+    .ProductListFiltersAside.show {
+        visibility: visible;
+        bottom: -300px;
+        animation: fadein 0.5s;
+
+    }
+
+    @keyframes fadein {
+        from {
+            bottom: -600px;
+            opacity: 0;
+        }
+
+        to {
+            bottom: -300px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeout {
+        from {
+            bottom: -300px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: -600px;
+            opacity: 0;
+        }
+    }
+
     #filterBTN {
         display: block;
     }
 
+    .filter {
+        width: 100%;
+        height: 76px;
+        border-radius: 8px;
+        padding: 24px;
+        transition: 0.5s;
+        box-shadow: 0px 4px 11.5px -5px #2050AD40;
+        background-color: #F4FAFF;
+    }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
     .ProductListFiltersAside {
         display: flex;
     }
+
+    #filterBTN {
+        display: none;
+    }
+}
+
+
+@media (min-width: 1441px) and (max-width: 1919px) {
+    .ProductListFiltersAside {
+        display: flex;
+    }
+
+    #filterBTN {
+        display: none;
+    }
+}
+
+@media (min-width: 1920px) {
+    .ProductListFiltersAside {
+        display: flex;
+    }
+
     #filterBTN {
         display: none;
     }

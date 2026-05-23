@@ -7,9 +7,11 @@
     position: relative;
     justify-self: flex-start;
 }
-.layoutFilters{
+
+.layoutFilters {
     display: flex;
 }
+
 .appliedFilters {
     display: flex;
     width: 220px;
@@ -97,6 +99,7 @@ hr {
     display: flex;
     flex-wrap: wrap;
 }
+
 .dropdown-content>p {
     margin: 8px 32px;
 }
@@ -251,12 +254,21 @@ input:checked~.slider:before {
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {
-    .dropdown,.switchContainer {
+
+    .dropdown,
+    .switchContainer {
         display: none;
+    }
+
+    .ProductListFilters {
+        justify-content: flex-end;
     }
 
 }
 
 @media (min-width: 1025px) {
+    .ProductListFilters {
+        justify-content: space-between;
+    }
 
 }
