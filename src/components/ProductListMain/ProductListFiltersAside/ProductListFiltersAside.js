@@ -115,27 +115,37 @@ export function Filter(props) {
   }
 
   const [slider, setSlider] = React.useState({ from: "12", to: "100" });
-  function slideOne(e) {
-    setSlider({ from: e, to: slider.to });
-    if (parseInt(slider.to) - parseInt(e) <= 5) {
-      setSlider({ from: parseInt(slider.to) - 5, to: slider.to });
-    }
-    fillColor();
-  }
 
-  function slideTwo(e) {
-    setSlider({ from: slider.from, to: e })
-    if (parseInt(slider.to) - parseInt(e) <= 5) {
-      setSlider({ from: slider.from, to: parseInt(slider.from) + 5 })
-    }
-    fillColor();
-  }
+// Set width of the range to decrease from the left side
+useEffect(() => {
+  if (maxValRef.current) {
+    const minPercent = Math.round((slider.from) * 100);
+    const maxPercent = Math.round((slider.to) * 100); 
 
-  function fillColor() {
-    let percent1 = (parseInt(slider.from) / 250) * 100;
-    let percent2 = (parseInt(slider.to) / 250) * 100;
-    document.querySelector(".sliderTrack").style.background = "red";
+    if (document.querySelector("#sliderRange").current) {
+      document.querySelector("#sliderRange").current.style.left = `${minPercent}%`;
+      document.querySelector("#sliderRange").current.style.width = `${maxPercent - minPercent}%`;
+    }
   }
+}, [slider.from]);
+
+// Set width of the range to decrease from the right side
+useEffect(() => {
+  if (minValRef.current) {
+    const minPercent = getPercent(+minValRef.current.value);
+    const maxPercent = Math.round((slider.to) * 100);
+
+    if (range.current) {
+     document.querySelector("#sliderRange").current.style.width = `${maxPercent - minPercent}%`;
+    }
+  }
+}, [slider.to]);
+
+// Get min and max values when their state changes
+// useEffect(() => {
+//     onChange({ min: minVal, max: maxVal });
+// }, [minVal, maxVal, onChange]);
+
 
   return <div id={props.filter} className={props.style + " filter closed"}>
     <div className='dropdown-container'><h2>{props.filter}</h2><button onClick={HandleDropdown}><img src='./images/icons/Arrow_up.png' /></button></div>
@@ -151,16 +161,25 @@ export function Filter(props) {
       <div className={props.style + ' SliderContainer'}>
         <div class="form_control">
           <div class="form_control_container">
-            <input class="form_control_container__time__input" type="number" id="fromInput" value={slider.from} min="0" max="100" />
+            <input class="form_control_container__time__input" type="number" id="fromInput" value="12" min="0" max="100" />
           </div>
           <div class="form_control_container">
-            <input class="form_control_container__time__input" type="number" id="toInput" value={slider.to} min="0" max="100" />
+            <input class="form_control_container__time__input" type="number" id="toInput" value="100" min="0" max="100" />
           </div>
         </div>
         <div className='wrapper'>
-          <input id='FromSlider' type='range' min="0" max="250" onInput={fillColor} />
-          <input id='ToSlider' type='range' min="0" max="250" onInput={fillColor} />
+          <input id='FromSlider' type='range' min="0" max="250" onChange={(event) => {
+            const value = Math.min(+event.target.value, 250 - 1);
+            setSlider({ from: value.toString(), to: slider.to });
+            event.target.value = value.toString();
+          }} />
+          <input id='ToSlider' type='range' min="0" max="250" onChange={(event) => {
+            const value = Math.max(+event.target.value, 0 + 1);
+            setSlider({ from: slider.from, to: value.toString() });
+            event.target.value = value.toString();
+          }} />
           <div class="sliderTrack"></div>
+          <div class="sliderRange"></div>
         </div>
       </div>
       <ul className={props.style + 'Checkbox'}>
@@ -172,8 +191,7 @@ export function Filter(props) {
 
 export function ProductListFiltersAside(props) {
 
-  function showFilters()
-  {
+  function showFilters() {
     document.querySelector(".ProductListFiltersAside").classList.toggle("show");
   }
 

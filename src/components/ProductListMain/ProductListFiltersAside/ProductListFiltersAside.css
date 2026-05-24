@@ -236,6 +236,8 @@ p.imageList,
     display: none;
 }
 
+/********************************* range slider *********************************/
+
 .range.filter.open {
     height: 160px;
 }
@@ -249,15 +251,29 @@ p.imageList,
 }
 
 
-.slider-track {
+.sliderTrack,
+.sliderRange {
     width: 100%;
     height: 5px;
     background-color: #0E2042;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     border-radius: 5px;
 }
+
+.sliderTrack {
+    position: absolute;
+    top: 50%;
+    border-radius: 5px;
+    background-color: #0E2042;
+    width: 100%;
+    z-index: 1;
+}
+
+.sliderRange {
+    background-color: #8DD334;
+    width: 100%;
+    z-index: 2;
+}
+
 
 .filter.open .SliderContainer {
     margin: 4px 0;
@@ -279,16 +295,6 @@ p.imageList,
     padding-top: 5px;
 }
 
-.SliderContainer .sliderTrack {
-    width: 100%;
-    height: 5px;
-    background-color: #d1d5db;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 5px;
-}
-
 .SliderContainer input[type="range"] {
     -webkit-appearance: none;
     appearance: none;
@@ -300,6 +306,8 @@ p.imageList,
     bottom: 0;
     background-color: transparent;
     pointer-events: none;
+    height: 0;
+    outline: none;
 }
 
 .SliderContainer input[type="range"]::-webkit-slider-runnable-track {
@@ -311,14 +319,19 @@ p.imageList,
     -webkit-appearance: none;
     height: 20px;
     width: 20px;
-    background-color: #3b82f6;
+    background-color: #B8EA48;
     cursor: pointer;
     border-radius: 50%;
     pointer-events: auto;
-    margin-top: -8px;
-    box-shadow: 0 0 0 3px #fff, 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: -5px;
 }
-
+#FromSlider {
+    z-index: 3;
+}
+#ToSlider {
+    z-index: 4;
+}
+/********************************************************************************/
 
 .imageListCheckbox label {
     display: flex;
@@ -358,7 +371,7 @@ p.imageList,
         visibility: hidden;
         position: fixed;
         z-index: 1;
-        bottom: -600px;
+        top: 600px;
         animation: fadeout 0.5s;
 
         border-top-left-radius: 8px;
@@ -374,31 +387,31 @@ p.imageList,
 
     .ProductListFiltersAside.show {
         visibility: visible;
-        bottom: -300px;
+        top: 300px;
         animation: fadein 0.5s;
 
     }
 
     @keyframes fadein {
         from {
-            bottom: -600px;
+            top: 600px;
             opacity: 0;
         }
 
         to {
-            bottom: -300px;
+            top: 300px;
             opacity: 1;
         }
     }
 
     @keyframes fadeout {
         from {
-            bottom: -300px;
+            top: 300px;
             opacity: 1;
         }
 
         to {
-            bottom: -600px;
+            top: 600px;
             opacity: 0;
         }
     }
