@@ -1,22 +1,22 @@
 import './ProductListFiltersAside.css';
 import React from 'react';
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 const brands = [
-  { name: "PUMIEY" },
-  { name: "Abardsion" },
-  { name: "Trendy Queen" },
-  { name: "Roselux" },
-  { name: "Darong" },
-  { name: "KevaMolly" },
-  { name: "AUTOMET" },
-  { name: "PUMA" },
-  { name: "H&M" },
-  { name: "Adidas" },
-  { name: "Nike" },
-  { name: "Zara" },
-  { name: "Gucci" },
-  { name: "Levi’s" }
+  { id: 1, name: "PUMIEY" },
+  { id: 2, name: "Abardsion" },
+  { id: 3, name: "Trendy Queen" },
+  { id: 4, name: "Roselux" },
+  { id: 5, name: "Darong" },
+  { id: 6, name: "KevaMolly" },
+  { id: 7, name: "AUTOMET" },
+  { id: 8, name: "PUMA" },
+  { id: 9, name: "H&M" },
+  { id: 10, name: "Adidas" },
+  { id: 11, name: "Nike" },
+  { id: 12, name: "Zara" },
+  { id: 13, name: "Gucci" },
+  { id: 14, name: "Levi’s" }
 ]
 
 const fabricTypes = [
@@ -115,6 +115,10 @@ export function Filter(props) {
     document.getElementById(props.filter).classList.remove(dropdown);
   }
 
+  // const toggleSelected = (id) => {
+  //     setSelected([...selected, id]);
+  // };
+
   const [slider, setSlider] = React.useState({ from: "12", to: "100" });
 
   return <div id={props.filter} className={props.style + " filter closed"}>
@@ -129,24 +133,38 @@ export function Filter(props) {
         />
       </div>
       <div className={props.style + ' SliderContainer'}>
-        <div class="form_control">
-          <div class="form_control_container">
-            <input class="form_control_container__time__input" type="number" id="fromInput" value={slider.from} min="0" max="100" />
+        <div class="SliderNumbers">
+          <div>
+            <input class="SliderNumberInput" type="number" id="fromInput" value={slider.from} min="0" max="100" />
+            <span />
+            <input class="SliderNumberInput" type="number" id="toInput" value={slider.to} min="0" max="100" />
           </div>
-          <div class="form_control_container">
-            <input class="form_control_container__time__input" type="number" id="toInput" value={slider.to} min="0" max="100" />
-          </div>
+          <button>Save</button>
         </div>
         <div className='wrapper'>
           <input id='FromSlider' type='range' min="0" max="250" value={slider.from} onChange={(event) => {
-            const value = Math.min(+event.target.value, 250 - 1);
-            setSlider({ from: value.toString(), to: slider.to });
-            event.target.value = value.toString();
+            if (slider.to - +event.target.value >= 5) {
+              const value = Math.max(+event.target.value);
+              setSlider({ from: value.toString(), to: slider.to });
+              event.target.value = value.toString();
+            }
+            else {
+              const value = Math.max(slider.to - 5);
+              setSlider({ from: value.toString(), to: slider.to });
+              event.target.value = value.toString();
+            }
           }} />
           <input id='ToSlider' type='range' min="0" max="250" value={slider.to} onChange={(event) => {
-            const value = Math.max(+event.target.value, 0 + 1);
-            setSlider({ from: slider.from, to: value.toString() });
-            event.target.value = value.toString();
+            if (+event.target.value - slider.from >= 5) {
+              const value = Math.max(+event.target.value);
+              setSlider({ from: slider.from, to: value.toString() });
+              event.target.value = value.toString();
+            }
+            else {
+              const value = Math.max(+slider.from + 5);
+              setSlider({ from: slider.from, to: value.toString() });
+              event.target.value = value.toString();
+            }
           }} />
           <div class="sliderTrack"></div>
           <div class="sliderRange" style={{ left: `${Math.round((slider.from / 250) * 100)}%`, width: `${(Math.round(((slider.to) / 250) * 100)) - (Math.round((slider.from / 250) * 100))}%` }}></div>
@@ -168,6 +186,33 @@ export function ProductListFiltersAside(props) {
   return <div>
     <button id='filterBTN' onClick={showFilters}><img src='./images/icons/Filter.png' /></button>
     <div className="ProductListFiltersAside">
+      <h2>Filters</h2>
+      <div id='searchWrapper'>
+        <div className={props.style + " SearchContainer"}>
+          <button className="search-btn"><img src='./images/icons/search-Icon.png' /></button>
+          <input
+            className="search-bar"
+            placeholder="Search..."
+            type="text"
+          />
+        </div>
+        <button>Reset all</button>
+      </div>
+
+      <div className='appliedFilters'>
+        <div>
+          <span><p>PUMIEY</p> <img src='./images/icons/Close.png' alt='close' /></span>
+          <span><p>Abardsion</p> <img src='./images/icons/Close.png' alt='close' /></span>
+          <span><p>Trendy Queen</p> <img src='./images/icons/Close.png' alt='close' /></span>
+          <span><p>Silk</p> <img src='./images/icons/Close.png' alt='close' /></span>
+          <span><p>Cotton</p> <img src='./images/icons/Close.png' alt='close' /></span>
+          <span><p>Darong</p> <img src='./images/icons/Close.png' alt='close' /></span>
+          <span><p>Elastane</p> <img src='./images/icons/Close.png' alt='close' /></span>
+          <span><p>White</p> <img src='./images/icons/Close.png' alt='close' /></span>
+          <span><p>Black</p> <img src='./images/icons/Close.png' alt='close' /></span>
+          <span><p>Yellow</p> <img src='./images/icons/Close.png' alt='close' /></span>
+        </div>
+      </div>
       <Filter filter="Brand" style="list" options={brands} />
       <Filter filter="Fabric type" style="list" options={fabricTypes} />
       <Filter filter="Size" style="grid" options={sizes} />

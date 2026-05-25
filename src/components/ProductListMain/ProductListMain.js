@@ -6,6 +6,7 @@ import { ProductCardsContainer } from './ProductCardsContainer/ProductCardsConta
 import { createContext, useState, useEffect } from 'react';
 
 export const LayoutContext = createContext();
+export const SelectedFilterContext = createContext();
 
 export function ProductListMain(props) {
 
@@ -47,7 +48,14 @@ export function ProductListMain(props) {
     { size: layout.size, unavailable: "available", wishlist: "hide", sale: "hide", discount: "-17%", img: './images/products/17-a43e849e457d30936f4e6c0c60f6dfe002383567.jpg', name: "SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel", stars: "4", comments: "1547", oldPrice: "$14.20", price: "18", priceCents: "99" },
     { size: layout.size, unavailable: "available", wishlist: "hide", sale: "hide", discount: "-17%", img: './images/products/18-a6dfb1507016330a4d5a2f03c97d1525172d6bce.jpg', name: "SOMALER Women's Cotton Wide Brim Sun Hat - UPF50+ UV Protection, Packable Beach Bucket Cap for Summer Travel", stars: "4", comments: "1547", oldPrice: "$14.20", price: "18", priceCents: "99" }
   ]
-  return (<LayoutContext.Provider value={{ layout, setLayout }}>
+
+  const [selectedBrands, setSelectedBrands] = useState([]);
+  const [selectedFabricTypes, setSelectedFabricTypes] = useState([]);
+  const [selectedSizes, setSelectedSizes] = useState([]);
+  const [selectedColors, setSelectedColors] = useState([]);
+  const [selectedReviews, setSelectedReviews] = useState([]);
+
+  return (<LayoutContext.Provider value={{ layout, setLayout, selectedBrands, setSelectedBrands, selectedFabricTypes, setSelectedFabricTypes, selectedSizes, setSelectedSizes, selectedColors, setSelectedColors, selectedReviews, setSelectedReviews }}>
     <div className="ProductListMain">
       <div id="center">
         <Breadcrumbs />
