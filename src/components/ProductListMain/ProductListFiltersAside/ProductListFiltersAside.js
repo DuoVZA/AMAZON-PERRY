@@ -1,5 +1,6 @@
 import './ProductListFiltersAside.css';
 import React from 'react';
+import { useEffect } from "react"
 
 const brands = [
   { name: "PUMIEY" },
@@ -116,37 +117,6 @@ export function Filter(props) {
 
   const [slider, setSlider] = React.useState({ from: "12", to: "100" });
 
-// Set width of the range to decrease from the left side
-useEffect(() => {
-  if (maxValRef.current) {
-    const minPercent = Math.round((slider.from) * 100);
-    const maxPercent = Math.round((slider.to) * 100); 
-
-    if (document.querySelector("#sliderRange").current) {
-      document.querySelector("#sliderRange").current.style.left = `${minPercent}%`;
-      document.querySelector("#sliderRange").current.style.width = `${maxPercent - minPercent}%`;
-    }
-  }
-}, [slider.from]);
-
-// Set width of the range to decrease from the right side
-useEffect(() => {
-  if (minValRef.current) {
-    const minPercent = getPercent(+minValRef.current.value);
-    const maxPercent = Math.round((slider.to) * 100);
-
-    if (range.current) {
-     document.querySelector("#sliderRange").current.style.width = `${maxPercent - minPercent}%`;
-    }
-  }
-}, [slider.to]);
-
-// Get min and max values when their state changes
-// useEffect(() => {
-//     onChange({ min: minVal, max: maxVal });
-// }, [minVal, maxVal, onChange]);
-
-
   return <div id={props.filter} className={props.style + " filter closed"}>
     <div className='dropdown-container'><h2>{props.filter}</h2><button onClick={HandleDropdown}><img src='./images/icons/Arrow_up.png' /></button></div>
     <div id='filter-dropdown'>
@@ -161,25 +131,25 @@ useEffect(() => {
       <div className={props.style + ' SliderContainer'}>
         <div class="form_control">
           <div class="form_control_container">
-            <input class="form_control_container__time__input" type="number" id="fromInput" value="12" min="0" max="100" />
+            <input class="form_control_container__time__input" type="number" id="fromInput" value={slider.from} min="0" max="100" />
           </div>
           <div class="form_control_container">
-            <input class="form_control_container__time__input" type="number" id="toInput" value="100" min="0" max="100" />
+            <input class="form_control_container__time__input" type="number" id="toInput" value={slider.to} min="0" max="100" />
           </div>
         </div>
         <div className='wrapper'>
-          <input id='FromSlider' type='range' min="0" max="250" onChange={(event) => {
+          <input id='FromSlider' type='range' min="0" max="250" value={slider.from} onChange={(event) => {
             const value = Math.min(+event.target.value, 250 - 1);
             setSlider({ from: value.toString(), to: slider.to });
             event.target.value = value.toString();
           }} />
-          <input id='ToSlider' type='range' min="0" max="250" onChange={(event) => {
+          <input id='ToSlider' type='range' min="0" max="250" value={slider.to} onChange={(event) => {
             const value = Math.max(+event.target.value, 0 + 1);
             setSlider({ from: slider.from, to: value.toString() });
             event.target.value = value.toString();
           }} />
           <div class="sliderTrack"></div>
-          <div class="sliderRange"></div>
+          <div class="sliderRange" style={{ left: `${Math.round((slider.from / 250) * 100)}%`, width: `${(Math.round(((slider.to) / 250) * 100)) - (Math.round((slider.from / 250) * 100))}%` }}></div>
         </div>
       </div>
       <ul className={props.style + 'Checkbox'}>

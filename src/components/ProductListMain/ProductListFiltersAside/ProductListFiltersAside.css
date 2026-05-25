@@ -257,10 +257,10 @@ p.imageList,
     height: 5px;
     background-color: #0E2042;
     border-radius: 5px;
+    position: absolute;
 }
 
 .sliderTrack {
-    position: absolute;
     top: 50%;
     border-radius: 5px;
     background-color: #0E2042;
@@ -271,6 +271,7 @@ p.imageList,
 .sliderRange {
     background-color: #8DD334;
     width: 100%;
+    top: 2px;
     z-index: 2;
 }
 
