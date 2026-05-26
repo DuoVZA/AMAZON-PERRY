@@ -8,7 +8,7 @@ import { createContext, useState, useEffect } from 'react';
 export const LayoutContext = createContext();
 export const SelectedFilterContext = createContext();
 
-export function ProductListMain(props) {
+export default function ProductListMain(props) {
 
   const [layout, setLayout] = useState({ size: "ProductCard-big", count: 12 });
   useEffect(() => {

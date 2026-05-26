@@ -127,12 +127,6 @@ select,
     appearance: base-select;
 }
 
-#sort::picker-icon {
-    content: url(../../../../public/images/icons/Arrow_Up.png);
-    rotate: 180deg;
-}
-
-
 option {
     display: flex;
     justify-content: flex-start;

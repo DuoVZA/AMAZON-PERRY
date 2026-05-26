@@ -1,5 +1,5 @@
 import './ProductCardsContainer.css';
-import { ProductCard } from '../../ProductCard/ProductCard';
+import ProductCard from '../../Main/ProductSlider/ProductCard/ProductCard';
 import { useState, createContext, useContext } from "react";
 import { LayoutContext } from "../ProductListMain";
 
