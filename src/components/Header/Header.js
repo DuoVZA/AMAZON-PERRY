@@ -53,9 +53,9 @@ export default function Header({ onBurgerClick, onLogSignClick }) {
       </div>
 
       {/* Поиск */}
-      <div className="search-container">
-        <input className="search-bar" placeholder="Search..." type="text" />
-        <button className="search-btn">{ICONS.search}</button>
+      <div className="search-container1">
+        <input className="search-bar1" placeholder="Search..." type="text" />
+        <button className="search-btn1">{ICONS.search}</button>
       </div>
 
       {/* Иконки */}
