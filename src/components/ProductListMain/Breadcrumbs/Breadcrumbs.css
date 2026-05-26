@@ -1,0 +1,23 @@
+.Breadcrumbs {
+    font-family: Mulish;
+    font-weight: 400;
+    letter-spacing: 2%;
+    display: flex;
+    align-items: center;
+    color: #0E2042;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+    .Breadcrumbs {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+}
+
+@media (min-width: 1025px) {
+    .Breadcrumbs {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
