@@ -8,7 +8,7 @@ import MenuBar from "./components/MenuBar/MenuBar";
 import Footer from "./components/Footer/Footer";
 import Main from "./components/Main/Main";
 import MBFLS from "./components/LoginSignupPageBar/MainBarForLogSign/MBFLS";
-import ProductListMain from './components/ProductListMain/ProductListMain';
+import {ProductListMain} from './components/ProductListMain/ProductListMain';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -49,7 +49,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Main onOpenLogin={handleOpenLogin} />} />
-        <Route path="/ProductListMain" element={<ProductListMain/>} />
+        <Route path="/ProductList" element={<ProductListMain/>} />
       </Routes>
 
       <Footer />

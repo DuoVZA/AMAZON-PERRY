@@ -115,10 +115,6 @@ export function Filter(props) {
     document.getElementById(props.filter).classList.remove(dropdown);
   }
 
-  // const toggleSelected = (id) => {
-  //     setSelected([...selected, id]);
-  // };
-
   const [slider, setSlider] = React.useState({ from: "12", to: "100" });
 
   return <div id={props.filter} className={props.style + " filter closed"}>
@@ -186,20 +182,19 @@ export function ProductListFiltersAside(props) {
   return <div>
     <button id='filterBTN' onClick={showFilters}><img src='./images/icons/Filter.png' /></button>
     <div className="ProductListFiltersAside">
-      <h2>Filters</h2>
-      <div id='searchWrapper'>
-        <div className={props.style + " SearchContainer"}>
-          <button className="search-btn"><img src='./images/icons/search-Icon.png' /></button>
-          <input
-            className="search-bar"
-            placeholder="Search..."
-            type="text"
-          />
-        </div>
-        <button>Reset all</button>
-      </div>
-
       <div className='appliedFilters'>
+        <h2>Filters</h2>
+        <div id='searchWrapper'>
+          <div className={props.style + " SearchContainer"}>
+            <button className="search-btn"><img src='./images/icons/search-Icon.png' /></button>
+            <input
+              className="search-bar"
+              placeholder="Search..."
+              type="text"
+            />
+          </div>
+          <button>Reset all</button>
+        </div>
         <div>
           <span><p>PUMIEY</p> <img src='./images/icons/Close.png' alt='close' /></span>
           <span><p>Abardsion</p> <img src='./images/icons/Close.png' alt='close' /></span>

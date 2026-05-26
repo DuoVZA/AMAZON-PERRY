@@ -54,18 +54,7 @@ export default function ProductSlider({ categories = 'trending' }) {
       <div id="container1" className={isMobile ? 'mobile-grid' : ''} ref={sliderRef}>
         {data.map((elem, index) => (
           <ProductCard
-            key={index}
-            size={elem.size}
-            img={elem.img}
-            name={elem.name}
-            stars={elem.stars}
-            comments={elem.comments}
-            price={elem.price}
-            priceCents={elem.priceCent}
-            oldPrice={elem.oldPrice}
-            discount={elem.discount}
-            sale={elem.sale}
-            unavailable={elem.unavailable}
+            item={elem}
           />
         ))}
       </div>

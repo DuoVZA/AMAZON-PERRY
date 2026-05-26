@@ -426,9 +426,10 @@ color: #0E2042;
     background: none;
     border: none;
     cursor: pointer;
+    width: 32px;
 }
 
-.ProductListFiltersAside .appliedFilters>img {
+.ProductListFiltersAside .appliedFilters img {
     rotate: 180deg;
     width: 24px;
     height: 24px;
@@ -439,7 +440,7 @@ color: #0E2042;
     justify-content: space-between;
 }
 
-#searchWrapper>button {
+#searchWrapper button {
     width: 82px;
     height: 32px;
     padding-top: 6px;
@@ -486,7 +487,7 @@ hr {
     align-items: center;
 }
 
-.ProductListFiltersAside .appliedFilters span>img {
+.ProductListFiltersAside .appliedFilters span img {
     width: 8px;
     height: 8px;
     margin-left: 12px;
@@ -496,12 +497,12 @@ hr {
     background-color: #f1f1f1
 }
 
-.ProductListFiltersAside .appliedFilters>div {
+.ProductListFiltersAside .appliedFilters div {
     display: flex;
     flex-wrap: wrap;
 }
 
-.ProductListFiltersAside .appliedFilters>p {
+.ProductListFiltersAside .appliedFilters p {
     margin: 8px 32px;
 }
 
