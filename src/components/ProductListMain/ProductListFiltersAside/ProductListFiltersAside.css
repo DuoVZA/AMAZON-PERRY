@@ -514,7 +514,7 @@ hr {
         visibility: hidden;
         position: fixed;
         z-index: 1;
-        top: 600px;
+        bottom: -300px;
         right: 0;
         animation: fadeout 0.5s;
 
@@ -529,31 +529,31 @@ hr {
 
     .ProductListFiltersAside.show {
         visibility: visible;
-        top: 300px;
+        bottom: 0;
         animation: fadein 0.5s;
 
     }
 
     @keyframes fadein {
         from {
-            top: 600px;
+            bottom: -300px;
             opacity: 0;
         }
 
         to {
-            top: 300px;
+            bottom: 0;
             opacity: 1;
         }
     }
 
     @keyframes fadeout {
         from {
-            top: 300px;
+            bottom: 0;
             opacity: 1;
         }
 
         to {
-            top: 600px;
+            bottom: -300px;
             opacity: 0;
         }
     }
