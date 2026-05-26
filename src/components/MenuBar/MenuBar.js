@@ -83,7 +83,7 @@ export default function MenuBar({ isOpen, onClose, onOpenLogin }) {
                     {option.name}
                   </button>
                 ))}
-                <button className="catalog-option see-all" onClick={() => handleClick("/ProductListMain")}>See all</button>
+                <button className="catalog-option see-all" onClick={() => handleClick("/ProductList")}>See all</button>
               </div>
             )}
           </div>

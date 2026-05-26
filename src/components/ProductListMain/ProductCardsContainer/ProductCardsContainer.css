@@ -39,7 +39,7 @@
     rotate: 180deg;
 }
 
-.CardsContainer,
+.CardsContainer.small,
 .CardsContainer.big {
     display: flex;
     flex-wrap: wrap;
@@ -47,64 +47,61 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
 
-    .CardsContainer,
-    .CardsContainer.big {
-        grid-template-columns: repeat(2, 1fr);
+    .CardsContainer {
+        /* grid-template-columns: repeat(2, 1fr); */
         gap: 16px;
     }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
 
-    .CardsContainer,
-    .CardsContainer.big {
-        grid-template-columns: repeat(2, 1fr);
+    .CardsContainer {
+        /* grid-template-columns: repeat(2, 1fr); */
         gap: 16px;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
-    .CardsContainer,
-    .CardsContainer.big {
-        grid-template-columns: repeat(2, 1fr);
+    .CardsContainer {
+        /* grid-template-columns: repeat(2, 1fr); */
         gap: 16px;
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
-    .CardsContainer {
-        grid-template-columns: repeat(5, 1fr);
+    .CardsContainer.small{
+        /* grid-template-columns: repeat(5, 1fr); */
         gap: 16px;
     }
 
     .CardsContainer.big {
-        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-columns: repeat(3, 1fr); */
         gap: 24px;
     }
 }
 
 
 @media (min-width: 1441px) and (max-width: 1919px) {
-    .CardsContainer {
-        grid-template-columns: repeat(4, 1fr);
+    .CardsContainer.small {
+        /* grid-template-columns: repeat(4, 1fr); */
         gap: 16px;
     }
 
     .CardsContainer.big {
-        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-columns: repeat(2, 1fr); */
         gap: 24px;
     }
 }
 
 @media (min-width: 1920px) {
-    .CardsContainer {
-        grid-template-columns: repeat(5, 1fr);
+    .CardsContainer.small {
+        /* grid-template-columns: repeat(5, 1fr); */
         gap: 16px;
     }
 
     .CardsContainer.big {
-        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-columns: repeat(3, 1fr); */
         gap: 24px;
     }
 }

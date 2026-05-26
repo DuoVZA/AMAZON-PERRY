@@ -14,7 +14,7 @@ export function ProductCardsContainer(props) {
   }
   return (
     <div className='ProductCardsContainer'>
-      <div className='CardsContainer big'>
+      <div className={'CardsContainer '+layout.size}>
         {currentItems.map(elem => <ProductCard item={elem} ></ProductCard>)}
       </div>
       <div className='pageNumbersContainer'>

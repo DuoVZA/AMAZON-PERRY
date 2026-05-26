@@ -120,7 +120,7 @@ export function Filter(props) {
   return <div id={props.filter} className={props.style + " filter closed"}>
     <div className='dropdown-container'><h2>{props.filter}</h2><button onClick={HandleDropdown}><img src='./images/icons/Arrow_up.png' /></button></div>
     <div id='filter-dropdown'>
-      <div className={props.style + "SearchContainer"}>
+      <div className={props.style + " SearchContainer"}>
         <button className="search-btn"><img src='./images/icons/search-Icon.png' /></button>
         <input
           className="search-bar"
@@ -193,7 +193,7 @@ export function ProductListFiltersAside(props) {
               type="text"
             />
           </div>
-          <button>Reset all</button>
+          <button className='resetBTN'>Reset all</button>
         </div>
         <div>
           <span><p>PUMIEY</p> <img src='./images/icons/Close.png' alt='close' /></span>

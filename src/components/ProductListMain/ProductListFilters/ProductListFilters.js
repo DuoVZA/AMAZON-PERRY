@@ -7,7 +7,7 @@ export function ProductListFilters() {
   const { layout, setLayout } = useContext(LayoutContext);
 
   function handleChange(e) {
-    let value = (e.target.checked ? "ProductCard-small" : "ProductCard-big");
+    let value = (e.target.checked ? "small" : "big");
     let countValue = (e.target.checked ? 30 : 12);
     setLayout({ size: value, count: countValue });
   }

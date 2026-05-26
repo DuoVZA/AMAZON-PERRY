@@ -27,7 +27,7 @@
     display: none;
 }
 
-.ProductCard {
+.slider-wrapper1 .ProductCard {
     scroll-snap-align: start;
     flex-shrink: 0;
     width: 200px;

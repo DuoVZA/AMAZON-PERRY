@@ -10,10 +10,10 @@ export const SelectedFilterContext = createContext();
 
 export function ProductListMain(props) {
 
-  const [layout, setLayout] = useState({ size: "ProductCard-big", count: 12 });
-  useEffect(() => {
-    document.querySelector(".CardsContainer").classList.toggle("big");
-  }, [layout]);
+  const [layout, setLayout] = useState({ size: "big", count: 12 });
+  // useEffect(() => {
+  //   document.querySelector(".CardsContainer").classList.toggle("big");
+  // }, [layout]);
 
   let products = [
     { size: layout.size, unavailable: "available", wishlist: "hide", sale: "hide", discount: "-17%", img: './images/products/e3324518fae647e41e812ea1a7aca05555347513.jpg', name: "Radiant Elegance Women's Summer Sleeveless Red Sundress – Lightweight, Flowy, and Perfect for Beach or Casual Wear", stars: "4", comments: "1547", oldPrice: "$14.20", price: "18", priceCents: "99" },
