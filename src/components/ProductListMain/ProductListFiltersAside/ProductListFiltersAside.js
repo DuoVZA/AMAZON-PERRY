@@ -124,7 +124,7 @@ export function Filter(props) {
   return <div id={props.filter} className={props.style + " filter closed"}>
     <div className='dropdown-container'><h2>{props.filter}</h2><button onClick={HandleDropdown}><img src='./images/icons/Arrow_up.png' /></button></div>
     <div id='filter-dropdown'>
-      <div className={props.style + " SearchContainer"}>
+      <div className={props.style + "SearchContainer"}>
         <button className="search-btn"><img src='./images/icons/search-Icon.png' /></button>
         <input
           className="search-bar"

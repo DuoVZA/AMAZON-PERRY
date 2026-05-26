@@ -64,7 +64,7 @@
 }
 
 /* Поиск */
-.search-container {
+.search-container1 {
   flex: 1;
   max-width: 1238px;
   display: flex;
@@ -74,7 +74,7 @@
   height: 40px;
 }
 
-.search-bar {
+.search-bar1 {
   display: flex;
   flex: 1;
   border: none;
@@ -83,7 +83,7 @@
   outline: none;
 }
 
-.search-btn {
+.search-btn1 {
   background: rgba(184, 234, 72, 1);
   border: none;
   width: 48px;      
@@ -96,7 +96,7 @@
   flex-shrink: 0;
 }
 
-.search-btn:hover { background: #a5d13f; }
+.search-btn1:hover { background: #a5d13f; }
 
 /* Иконки */
 .header-icons {
@@ -143,16 +143,16 @@
     height: 20px;
   }
 
-  .search-container {
+  .search-container1 {
     margin-left: 0;
     overflow: hidden;
   }
 
-  .search-bar {
+  .search-bar1 {
     border-radius: 6px;
   }
 
-  .search-btn {
+  .search-btn1 {
     width: 48px;
     min-width: 48px;
     height: 40px;
@@ -164,7 +164,7 @@
     overflow: hidden;
   }
 
-  .search-btn img {
+  .search-btn1 img {
     width: 20px;
     height: 20px ;
     display: block;
