@@ -1,9 +1,9 @@
 import './ProductCard.css';
 
 export default function ProductCard(props) {
-  return <div className={props.item.size}>
-    <div className={props.item.unavailable}><div><p>Out of stock</p><button>Stock alert</button></div></div>
-    <button className={props.item.wishlist}><p>Remove</p></button>
+  return <div className={'ProductCard '+props.item.size}>
+    <div className={props.item.unavailable ? `${props.item.unavailable}` : 'hide'}><div><p>Out of stock</p><button>Stock alert</button></div></div>
+    <button className={props.item.wishlist ? `${props.item.wishlist}` : 'hide'}><p>Remove</p></button>
     <div id='image'>
       <div className={props.item.sale} id="discount">
         <p>{props.discount}</p>

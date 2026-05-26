@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-.ProductCard-big,
-.ProductCard-small {
+.ProductCard.big,
+.ProductCard.small {
     box-shadow: 0px 4px 11.5px -5px #2050AD40;
 }
 
-.ProductCard-big:hover,
-.ProductCard-small:hover {
+.ProductCard.big:hover,
+.ProductCard.small:hover {
     border: 2px solid #CCDDFF;
 }
 
@@ -35,8 +35,8 @@
     background-color: #B8EA48;
 }
 
-.ProductCard-small,
-.ProductCard-big {
+.ProductCard.small,
+.ProductCard.big {
     font-family: Mulish;
     letter-spacing: 2%;
     text-align: center;
@@ -67,30 +67,30 @@
     margin: 0;
 }
 
-.ProductCard-small #discount,
-.ProductCard-big #discount {
+.ProductCard.small #discount,
+.ProductCard.big #discount {
     position: absolute;
     right: 6px;
     top: 6px;
     z-index: 2;
 }
 
-.ProductCard-small #discount>img {
+.ProductCard.small #discount>img {
     position: relative;
     right: 5px;
     top: -2px;
     width: 115%;
 }
 
-.ProductCard-big #discount>img {
+.ProductCard.big #discount>img {
     position: relative;
     right: 8px;
     top: -4px;
     width: 115%;
 }
 
-.ProductCard-small #discount>p,
-.ProductCard-big #discount>p {
+.ProductCard.small #discount>p,
+.ProductCard.big #discount>p {
     font-weight: 700;
     font-style: Bold;
 
@@ -101,13 +101,13 @@
     z-index: 3;
 }
 
-.ProductCard-big #discount>p {
+.ProductCard.big #discount>p {
     right: 28px;
     top: 12px;
 }
 
-.ProductCard-small #information>p,
-.ProductCard-big #information>p {
+.ProductCard.small #information>p,
+.ProductCard.big #information>p {
     font-weight: 400;
     margin: 0;
 
@@ -119,12 +119,12 @@
     text-overflow: ellipsis;
 }
 
-.ProductCard-big #information>p {
+.ProductCard.big #information>p {
     font-weight: 500;
 }
 
-.ProductCard-small #information>#icons,
-.ProductCard-big #information>#icons {
+.ProductCard.small #information>#icons,
+.ProductCard.big #information>#icons {
     font-family: Mulish;
     letter-spacing: 2%;
 
@@ -132,41 +132,41 @@
     justify-content: center;
 }
 
-.ProductCard-small #information>#icons>span,
-.ProductCard-big #information>#icons>span {
+.ProductCard.small #information>#icons>span,
+.ProductCard.big #information>#icons>span {
     display: flex;
     align-items: center;
 }
 
-.ProductCard-small #information>#icons p,
-.ProductCard-big #information>#icons p {
+.ProductCard.small #information>#icons p,
+.ProductCard.big #information>#icons p {
     margin: 0;
 }
 
-.ProductCard-small #price,
-.ProductCard-big #price {
+.ProductCard.small #price,
+.ProductCard.big #price {
     display: flex;
     justify-content: center;
 }
 
-.ProductCard-small #price p,
-.ProductCard-big #price p {
+.ProductCard.small #price p,
+.ProductCard.big #price p {
     display: inline;
 }
 
-.ProductCard-small #price>#currentPrice {
+.ProductCard.small #price>#currentPrice {
     font-weight: 500;
     margin: 0;
 }
 
 
-.ProductCard-big #price>#currentPrice {
+.ProductCard.big #price>#currentPrice {
     font-weight: 600;
     margin: 0;
 }
 
-.ProductCard-small #price #currentPriceCents,
-.ProductCard-big #price #currentPriceCents {
+.ProductCard.small #price #currentPriceCents,
+.ProductCard.big #price #currentPriceCents {
     line-height: 32px;
     margin: 0;
     vertical-align: super;
@@ -174,8 +174,8 @@
     left: 2px;
 }
 
-.ProductCard-small #price>#oldPrice,
-.ProductCard-big #price>#oldPrice {
+.ProductCard.small #price>#oldPrice,
+.ProductCard.big #price>#oldPrice {
     font-weight: 500;
     margin: 8px 0 0 8px;
     text-decoration: line-through;
@@ -184,15 +184,15 @@
 
 
 @media (min-width: 320px) and (max-width: 480px) {
-    .ProductCard-small .unavailable,
-    .ProductCard-big .unavailable {
+    .ProductCard.small .unavailable,
+    .ProductCard.big .unavailable {
         /* width: 171px;
         height: 270px; */
         border-radius: 4px;
     }
 
-    .ProductCard-small,
-    .ProductCard-big {
+    .ProductCard.small,
+    .ProductCard.big {
         /* width: 171px;
         height: 270px; */
         border-radius: 4px;
@@ -209,79 +209,79 @@
         line-height: 16px;
     }
 
-    .ProductCard-small #image,
-    .ProductCard-big #image {
+    .ProductCard.small #image,
+    .ProductCard.big #image {
         position: relative;
         width: 143px;
         height: 143px;
     }
 
-    .ProductCard-small #image>img,
-    .ProductCard-big #image>img {
+    .ProductCard.small #image>img,
+    .ProductCard.big #image>img {
         object-fit: cover;
         width: 100%;
         height: 100%;
         border-radius: 2px;
     }
 
-    .ProductCard-small #discount,
-    .ProductCard-big #discount {
+    .ProductCard.small #discount,
+    .ProductCard.big #discount {
         width: 48px;
         height: 30px;
     }
 
-    .ProductCard-small #discount>p,
-    .ProductCard-big #discount>p {
+    .ProductCard.small #discount>p,
+    .ProductCard.big #discount>p {
         right: 12px;
         font-size: 12px;
         line-height: 16px;
     }
 
-    .ProductCard-small #information,
-    .ProductCard-big #information {
+    .ProductCard.small #information,
+    .ProductCard.big #information {
         width: 141px;
         margin: 12px 0;
     }
 
-    .ProductCard-small #information>p,
-    .ProductCard-big #information>p {
+    .ProductCard.small #information>p,
+    .ProductCard.big #information>p {
         font-size: 14px;
         line-height: 18px;
     }
 
-    .ProductCard-small #information>#icons,
-    .ProductCard-big #information>#icons {
+    .ProductCard.small #information>#icons,
+    .ProductCard.big #information>#icons {
         font-weight: 400;
         font-size: 12px;
         line-height: 16px;
     }
 
-    .ProductCard-small #information>#icons>span,
-    .ProductCard-big #information>#icons>span {
+    .ProductCard.small #information>#icons>span,
+    .ProductCard.big #information>#icons>span {
         margin: 0 6px;
     }
 
-    .ProductCard-small #information>#icons img,
-    .ProductCard-big #information>#icons img {
+    .ProductCard.small #information>#icons img,
+    .ProductCard.big #information>#icons img {
         width: 16px;
         height: 16px;
     }
 
-    .ProductCard-small #price>#currentPrice,
-    .ProductCard-big #price>#currentPrice {
+    .ProductCard.small #price>#currentPrice,
+    .ProductCard.big #price>#currentPrice {
         font-size: 16px;
         line-height: 24px;
 
     }
 
-    .ProductCard-small #price #currentPriceCents,
-    .ProductCard-big #price #currentPriceCents {
+    .ProductCard.small #price #currentPriceCents,
+    .ProductCard.big #price #currentPriceCents {
         font-size: 10px;
         top: -5px;
     }
 
-    .ProductCard-small #price>#oldPrice,
-    .ProductCard-big #price>#oldPrice {
+    .ProductCard.small #price>#oldPrice,
+    .ProductCard.big #price>#oldPrice {
         font-size: 12px;
         line-height: 16px;
     }
@@ -311,8 +311,8 @@
         line-height: 24px;
     }
 
-    .ProductCard-small,
-    .ProductCard-big {
+    .ProductCard.small,
+    .ProductCard.big {
         font-family: Mulish;
         letter-spacing: 2%;
         text-align: center;
@@ -326,15 +326,15 @@
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    .ProductCard-small .unavailable,
-    .ProductCard-big .unavailable {
+    .ProductCard.small .unavailable,
+    .ProductCard.big .unavailable {
         /* width: 171px;
         height: 270px; */
         border-radius: 4px;
     }
 
-    .ProductCard-small,
-    .ProductCard-big {
+    .ProductCard.small,
+    .ProductCard.big {
         /* width: 171px;
         height: 270px; */
         border-radius: 4px;
@@ -351,79 +351,79 @@
         line-height: 16px;
     }
 
-    .ProductCard-small #image,
-    .ProductCard-big #image {
+    .ProductCard.small #image,
+    .ProductCard.big #image {
         position: relative;
         width: 143px;
         height: 143px;
     }
 
-    .ProductCard-small #image>img,
-    .ProductCard-big #image>img {
+    .ProductCard.small #image>img,
+    .ProductCard.big #image>img {
         object-fit: cover;
         width: 100%;
         height: 100%;
         border-radius: 2px;
     }
 
-    .ProductCard-small #discount,
-    .ProductCard-big #discount {
+    .ProductCard.small #discount,
+    .ProductCard.big #discount {
         width: 48px;
         height: 30px;
     }
 
-    .ProductCard-small #discount>p,
-    .ProductCard-big #discount>p {
+    .ProductCard.small #discount>p,
+    .ProductCard.big #discount>p {
         right: 12px;
         font-size: 12px;
         line-height: 16px;
     }
 
-    .ProductCard-small #information,
-    .ProductCard-big #information {
+    .ProductCard.small #information,
+    .ProductCard.big #information {
         width: 141px;
         margin: 12px 0;
     }
 
-    .ProductCard-small #information>p,
-    .ProductCard-big #information>p {
+    .ProductCard.small #information>p,
+    .ProductCard.big #information>p {
         font-size: 14px;
         line-height: 18px;
     }
 
-    .ProductCard-small #information>#icons,
-    .ProductCard-big #information>#icons {
+    .ProductCard.small #information>#icons,
+    .ProductCard.big #information>#icons {
         font-weight: 400;
         font-size: 12px;
         line-height: 16px;
     }
 
-    .ProductCard-small #information>#icons>span,
-    .ProductCard-big #information>#icons>span {
+    .ProductCard.small #information>#icons>span,
+    .ProductCard.big #information>#icons>span {
         margin: 0 6px;
     }
 
-    .ProductCard-small #information>#icons img,
-    .ProductCard-big #information>#icons img {
+    .ProductCard.small #information>#icons img,
+    .ProductCard.big #information>#icons img {
         width: 16px;
         height: 16px;
     }
 
-    .ProductCard-small #price>#currentPrice,
-    .ProductCard-big #price>#currentPrice {
+    .ProductCard.small #price>#currentPrice,
+    .ProductCard.big #price>#currentPrice {
         font-size: 16px;
         line-height: 24px;
 
     }
 
-    .ProductCard-small #price #currentPriceCents,
-    .ProductCard-big #price #currentPriceCents {
+    .ProductCard.small #price #currentPriceCents,
+    .ProductCard.big #price #currentPriceCents {
         font-size: 10px;
         top: -5px;
     }
 
-    .ProductCard-small #price>#oldPrice,
-    .ProductCard-big #price>#oldPrice {
+    .ProductCard.small #price>#oldPrice,
+    .ProductCard.big #price>#oldPrice {
         font-size: 12px;
         line-height: 16px;
     }
@@ -453,8 +453,8 @@
         line-height: 24px;
     }
 
-    .ProductCard-small,
-    .ProductCard-big {
+    .ProductCard.small,
+    .ProductCard.big {
         font-family: Mulish;
         letter-spacing: 2%;
         text-align: center;
@@ -468,15 +468,15 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .ProductCard-small .unavailable,
-    .ProductCard-big .unavailable {
+    .ProductCard.small .unavailable,
+    .ProductCard.big .unavailable {
         /* width: 171px;
         height: 270px; */
         border-radius: 4px;
     }
 
-    .ProductCard-small,
-    .ProductCard-big {
+    .ProductCard.small,
+    .ProductCard.big {
         /* width: 171px;
         height: 270px; */
         border-radius: 4px;
@@ -493,79 +493,79 @@
         line-height: 16px;
     }
 
-    .ProductCard-small #image,
-    .ProductCard-big #image {
+    .ProductCard.small #image,
+    .ProductCard.big #image {
         position: relative;
         width: 143px;
         height: 143px;
     }
 
-    .ProductCard-small #image>img,
-    .ProductCard-big #image>img {
+    .ProductCard.small #image>img,
+    .ProductCard.big #image>img {
         object-fit: cover;
         width: 100%;
         height: 100%;
         border-radius: 2px;
     }
 
-    .ProductCard-small #discount,
-    .ProductCard-big #discount {
+    .ProductCard.small #discount,
+    .ProductCard.big #discount {
         width: 48px;
         height: 30px;
     }
 
-    .ProductCard-small #discount>p,
-    .ProductCard-big #discount>p {
+    .ProductCard.small #discount>p,
+    .ProductCard.big #discount>p {
         right: 12px;
         font-size: 12px;
         line-height: 16px;
     }
 
-    .ProductCard-small #information,
-    .ProductCard-big #information {
+    .ProductCard.small #information,
+    .ProductCard.big #information {
         width: 141px;
         margin: 12px 0;
     }
 
-    .ProductCard-small #information>p,
-    .ProductCard-big #information>p {
+    .ProductCard.small #information>p,
+    .ProductCard.big #information>p {
         font-size: 14px;
         line-height: 18px;
     }
 
-    .ProductCard-small #information>#icons,
-    .ProductCard-big #information>#icons {
+    .ProductCard.small #information>#icons,
+    .ProductCard.big #information>#icons {
         font-weight: 400;
         font-size: 12px;
         line-height: 16px;
     }
 
-    .ProductCard-small #information>#icons>span,
-    .ProductCard-big #information>#icons>span {
+    .ProductCard.small #information>#icons>span,
+    .ProductCard.big #information>#icons>span {
         margin: 0 6px;
     }
 
-    .ProductCard-small #information>#icons img,
-    .ProductCard-big #information>#icons img {
+    .ProductCard.small #information>#icons img,
+    .ProductCard.big #information>#icons img {
         width: 16px;
         height: 16px;
     }
 
-    .ProductCard-small #price>#currentPrice,
-    .ProductCard-big #price>#currentPrice {
+    .ProductCard.small #price>#currentPrice,
+    .ProductCard.big #price>#currentPrice {
         font-size: 16px;
         line-height: 24px;
 
     }
 
-    .ProductCard-small #price #currentPriceCents,
-    .ProductCard-big #price #currentPriceCents {
+    .ProductCard.small #price #currentPriceCents,
+    .ProductCard.big #price #currentPriceCents {
         font-size: 10px;
         top: -5px;
     }
 
-    .ProductCard-small #price>#oldPrice,
-    .ProductCard-big #price>#oldPrice {
+    .ProductCard.small #price>#oldPrice,
+    .ProductCard.big #price>#oldPrice {
         font-size: 12px;
         line-height: 16px;
     }
@@ -595,8 +595,8 @@
         line-height: 24px;
     }
 
-    .ProductCard-small,
-    .ProductCard-big {
+    .ProductCard.small,
+    .ProductCard.big {
         font-family: Mulish;
         letter-spacing: 2%;
         text-align: center;
@@ -610,15 +610,15 @@
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
-    .ProductCard-small .unavailable,
-    .ProductCard-big .unavailable {
+    .ProductCard.small .unavailable,
+    .ProductCard.big .unavailable {
         /* width: 171px;
         height: 270px; */
         border-radius: 4px;
     }
 
-    .ProductCard-small,
-    .ProductCard-big {
+    .ProductCard.small,
+    .ProductCard.big {
         /* width: 171px;
         height: 270px; */
         border-radius: 4px;
@@ -635,79 +635,79 @@
         line-height: 16px;
     }
 
-    .ProductCard-small #image,
-    .ProductCard-big #image {
+    .ProductCard.small #image,
+    .ProductCard.big #image {
         position: relative;
         width: 143px;
         height: 143px;
     }
 
-    .ProductCard-small #image>img,
-    .ProductCard-big #image>img {
+    .ProductCard.small #image>img,
+    .ProductCard.big #image>img {
         object-fit: cover;
         width: 100%;
         height: 100%;
         border-radius: 2px;
     }
 
-    .ProductCard-small #discount,
-    .ProductCard-big #discount {
+    .ProductCard.small #discount,
+    .ProductCard.big #discount {
         width: 48px;
         height: 30px;
     }
 
-    .ProductCard-small #discount>p,
-    .ProductCard-big #discount>p {
+    .ProductCard.small #discount>p,
+    .ProductCard.big #discount>p {
         right: 12px;
         font-size: 12px;
         line-height: 16px;
     }
 
-    .ProductCard-small #information,
-    .ProductCard-big #information {
+    .ProductCard.small #information,
+    .ProductCard.big #information {
         width: 141px;
         margin: 12px 0;
     }
 
-    .ProductCard-small #information>p,
-    .ProductCard-big #information>p {
+    .ProductCard.small #information>p,
+    .ProductCard.big #information>p {
         font-size: 14px;
         line-height: 18px;
     }
 
-    .ProductCard-small #information>#icons,
-    .ProductCard-big #information>#icons {
+    .ProductCard.small #information>#icons,
+    .ProductCard.big #information>#icons {
         font-weight: 400;
         font-size: 12px;
         line-height: 16px;
     }
 
-    .ProductCard-small #information>#icons>span,
-    .ProductCard-big #information>#icons>span {
+    .ProductCard.small #information>#icons>span,
+    .ProductCard.big #information>#icons>span {
         margin: 0 6px;
     }
 
-    .ProductCard-small #information>#icons img,
-    .ProductCard-big #information>#icons img {
+    .ProductCard.small #information>#icons img,
+    .ProductCard.big #information>#icons img {
         width: 16px;
         height: 16px;
     }
 
-    .ProductCard-small #price>#currentPrice,
-    .ProductCard-big #price>#currentPrice {
+    .ProductCard.small #price>#currentPrice,
+    .ProductCard.big #price>#currentPrice {
         font-size: 16px;
         line-height: 24px;
 
     }
 
-    .ProductCard-small #price #currentPriceCents,
-    .ProductCard-big #price #currentPriceCents {
+    .ProductCard.small #price #currentPriceCents,
+    .ProductCard.big #price #currentPriceCents {
         font-size: 10px;
         top: -5px;
     }
 
-    .ProductCard-small #price>#oldPrice,
-    .ProductCard-big #price>#oldPrice {
+    .ProductCard.small #price>#oldPrice,
+    .ProductCard.big #price>#oldPrice {
         font-size: 12px;
         line-height: 16px;
     }
@@ -737,8 +737,8 @@
         line-height: 24px;
     }
 
-    .ProductCard-small,
-    .ProductCard-big {
+    .ProductCard.small,
+    .ProductCard.big {
         font-family: Mulish;
         letter-spacing: 2%;
         text-align: center;
@@ -753,33 +753,33 @@
 
 
 @media (min-width: 1441px) and (max-width: 1919px) {
-    .ProductCard-small .unavailable {
+    .ProductCard.small .unavailable {
         /* width: 225px;
         height: 361px; */
         border-radius: 8px;
         padding: 16px;
     }
 
-    .ProductCard-big .unavailable {
+    .ProductCard.big .unavailable {
         /* width: 382px;
         height: 534px; */
         border-radius: 8px;
         padding: 61px;
     }
 
-    .ProductCard-small .unavailable>div {
+    .ProductCard.small .unavailable>div {
         position: relative;
         top: 45px;
         width: 193px;
     }
 
-    .ProductCard-big .unavailable>div {
+    .ProductCard.big .unavailable>div {
         position: relative;
         top: 45px;
         width: 260px;
     }
 
-    .ProductCard-small .unavailable p {
+    .ProductCard.small .unavailable p {
         font-weight: 500;
         letter-spacing: -1.5%;
         font-size: 24px;
@@ -787,7 +787,7 @@
         margin: 12px 0;
     }
 
-    .ProductCard-big .unavailable p {
+    .ProductCard.big .unavailable p {
         font-weight: 600;
         font-size: 40px;
         line-height: 48px;
@@ -795,28 +795,28 @@
         margin: 14px 0;
     }
 
-    .ProductCard-small .unavailable button {
+    .ProductCard.small .unavailable button {
         width: 147px;
         height: 40px;
         font-size: 16px;
         line-height: 24px;
     }
 
-    .ProductCard-big .unavailable button {
+    .ProductCard.big .unavailable button {
         width: 107px;
         height: 40px;
         font-size: 16px;
         line-height: 24px;
     }
 
-    .ProductCard-small {
+    .ProductCard.small {
         /* width: 225px;
         height: 361px; */
         border-radius: 8px;
         padding: 16px;
     }
 
-    .ProductCard-big {
+    .ProductCard.big {
         /* width: 382px;
         height: 534px; */
         border-radius: 8px;
@@ -833,125 +833,125 @@
         line-height: 24px;
     }
 
-    .ProductCard-small #image {
+    .ProductCard.small #image {
         position: relative;
         width: 193px;
         height: 193px;
     }
 
-    .ProductCard-big #image {
+    .ProductCard.big #image {
         position: relative;
         width: 334px;
         height: 334px;
 
     }
 
-    .ProductCard-small #image>img,
-    .ProductCard-big #image>img {
+    .ProductCard.small #image>img,
+    .ProductCard.big #image>img {
         object-fit: cover;
         width: 100%;
         height: 100%;
         border-radius: 4px;
     }
 
-    .ProductCard-small #discount {
+    .ProductCard.small #discount {
         width: 64px;
         height: 40px;
     }
 
-    .ProductCard-big #discount {
+    .ProductCard.big #discount {
         width: 99px;
         height: 62px;
     }
 
-    .ProductCard-small #discount>p {
+    .ProductCard.small #discount>p {
         font-size: 14px;
         line-height: 24px;
     }
 
-    .ProductCard-big #discount>p {
+    .ProductCard.big #discount>p {
         font-size: 18px;
         line-height: 28px;
     }
 
-    .ProductCard-small #information {
+    .ProductCard.small #information {
         width: 193px;
         margin: 6px 0;
     }
 
-    .ProductCard-big #information {
+    .ProductCard.big #information {
         width: 334px;
         margin: 12px 0;
     }
 
-    .ProductCard-small #information>p {
+    .ProductCard.small #information>p {
         font-size: 18px;
         line-height: 28px;
     }
 
-    .ProductCard-big #information>p {
+    .ProductCard.big #information>p {
         font-size: 24px;
         line-height: 28px;
     }
 
-    .ProductCard-small #information>#icons {
+    .ProductCard.small #information>#icons {
         font-weight: 500;
         font-size: 14px;
         line-height: 24px;
     }
 
-    .ProductCard-big #information>#icons {
+    .ProductCard.big #information>#icons {
         font-weight: 400;
         font-size: 18px;
         line-height: 28px;
     }
 
-    .ProductCard-small #information>#icons>span {
+    .ProductCard.small #information>#icons>span {
         margin: 0 7px;
     }
 
-    .ProductCard-big #information>#icons>span {
+    .ProductCard.big #information>#icons>span {
         margin: 0 8px;
     }
 
-    .ProductCard-small #information>#icons img {
+    .ProductCard.small #information>#icons img {
         width: 24px;
         height: 24px;
     }
 
-    .ProductCard-big #information>#icons img {
+    .ProductCard.big #information>#icons img {
         width: 28px;
         height: 28px;
     }
 
-    .ProductCard-small #price>#currentPrice {
+    .ProductCard.small #price>#currentPrice {
         font-size: 20px;
         line-height: 32px;
     }
 
-    .ProductCard-big #price>#currentPrice {
+    .ProductCard.big #price>#currentPrice {
         font-size: 32px;
         line-height: 36px;
     }
 
-    .ProductCard-small #price #currentPriceCents {
+    .ProductCard.small #price #currentPriceCents {
         font-weight: 650;
         font-size: 12px;
         top: -2px;
     }
 
-    .ProductCard-big #price #currentPriceCents {
+    .ProductCard.big #price #currentPriceCents {
         font-weight: 700;
         font-size: 19px;
         top: -2px;
     }
 
-    .ProductCard-small #price>#oldPrice {
+    .ProductCard.small #price>#oldPrice {
         font-size: 16px;
         line-height: 24px;
     }
 
-    .ProductCard-big #price>#oldPrice {
+    .ProductCard.big #price>#oldPrice {
         font-size: 18px;
         line-height: 28px;
     }
@@ -959,33 +959,33 @@
 }
 
 @media (min-width: 1920px) {
-    .ProductCard-small .unavailable {
+    .ProductCard.small .unavailable {
         /* width: 225px;
         height: 361px; */
         border-radius: 8px;
         padding: 16px;
     }
 
-    .ProductCard-big .unavailable {
+    .ProductCard.big .unavailable {
         /* width: 382px;
         height: 534px; */
         border-radius: 8px;
         padding: 61px;
     }
 
-    .ProductCard-small .unavailable>div {
+    .ProductCard.small .unavailable>div {
         position: relative;
         top: 45px;
         width: 193px;
     }
 
-    .ProductCard-big .unavailable>div {
+    .ProductCard.big .unavailable>div {
         position: relative;
         top: 45px;
         width: 260px;
     }
 
-    .ProductCard-small .unavailable p {
+    .ProductCard.small .unavailable p {
         font-weight: 500;
         letter-spacing: -1.5%;
         font-size: 24px;
@@ -993,7 +993,7 @@
         margin: 12px 0;
     }
 
-    .ProductCard-big .unavailable p {
+    .ProductCard.big .unavailable p {
         font-weight: 600;
         font-size: 40px;
         line-height: 48px;
@@ -1001,28 +1001,28 @@
         margin: 14px 0;
     }
 
-    .ProductCard-small .unavailable button {
+    .ProductCard.small .unavailable button {
         width: 147px;
         height: 40px;
         font-size: 16px;
         line-height: 24px;
     }
 
-    .ProductCard-big .unavailable button {
+    .ProductCard.big .unavailable button {
         width: 107px;
         height: 40px;
         font-size: 16px;
         line-height: 24px;
     }
 
-    .ProductCard-small {
+    .ProductCard.small {
         /* width: 225px;
         height: 361px; */
         border-radius: 8px;
         padding: 16px;
     }
 
-    .ProductCard-big {
+    .ProductCard.big {
         /* width: 382px;
         height: 534px; */
         border-radius: 8px;
@@ -1039,125 +1039,125 @@
         line-height: 24px;
     }
 
-    .ProductCard-small #image {
+    .ProductCard.small #image {
         position: relative;
         width: 193px;
         height: 193px;
     }
 
-    .ProductCard-big #image {
+    .ProductCard.big #image {
         position: relative;
         width: 334px;
         height: 334px;
 
     }
 
-    .ProductCard-small #image>img,
-    .ProductCard-big #image>img {
+    .ProductCard.small #image>img,
+    .ProductCard.big #image>img {
         object-fit: cover;
         width: 100%;
         height: 100%;
         border-radius: 4px;
     }
 
-    .ProductCard-small #discount {
+    .ProductCard.small #discount {
         width: 64px;
         height: 40px;
     }
 
-    .ProductCard-big #discount {
+    .ProductCard.big #discount {
         width: 99px;
         height: 62px;
     }
 
-    .ProductCard-small #discount>p {
+    .ProductCard.small #discount>p {
         font-size: 14px;
         line-height: 24px;
     }
 
-    .ProductCard-big #discount>p {
+    .ProductCard.big #discount>p {
         font-size: 18px;
         line-height: 28px;
     }
 
-    .ProductCard-small #information {
+    .ProductCard.small #information {
         width: 193px;
         margin: 6px 0;
     }
 
-    .ProductCard-big #information {
+    .ProductCard.big #information {
         width: 334px;
         margin: 12px 0;
     }
 
-    .ProductCard-small #information>p {
+    .ProductCard.small #information>p {
         font-size: 18px;
         line-height: 28px;
     }
 
-    .ProductCard-big #information>p {
+    .ProductCard.big #information>p {
         font-size: 24px;
         line-height: 28px;
     }
 
-    .ProductCard-small #information>#icons {
+    .ProductCard.small #information>#icons {
         font-weight: 500;
         font-size: 14px;
         line-height: 24px;
     }
 
-    .ProductCard-big #information>#icons {
+    .ProductCard.big #information>#icons {
         font-weight: 400;
         font-size: 18px;
         line-height: 28px;
     }
 
-    .ProductCard-small #information>#icons>span {
+    .ProductCard.small #information>#icons>span {
         margin: 0 7px;
     }
 
-    .ProductCard-big #information>#icons>span {
+    .ProductCard.big #information>#icons>span {
         margin: 0 8px;
     }
 
-    .ProductCard-small #information>#icons img {
+    .ProductCard.small #information>#icons img {
         width: 24px;
         height: 24px;
     }
 
-    .ProductCard-big #information>#icons img {
+    .ProductCard.big #information>#icons img {
         width: 28px;
         height: 28px;
     }
 
-    .ProductCard-small #price>#currentPrice {
+    .ProductCard.small #price>#currentPrice {
         font-size: 20px;
         line-height: 32px;
     }
 
-    .ProductCard-big #price>#currentPrice {
+    .ProductCard.big #price>#currentPrice {
         font-size: 32px;
         line-height: 36px;
     }
 
-    .ProductCard-small #price #currentPriceCents {
+    .ProductCard.small #price #currentPriceCents {
         font-weight: 650;
         font-size: 12px;
         top: -2px;
     }
 
-    .ProductCard-big #price #currentPriceCents {
+    .ProductCard.big #price #currentPriceCents {
         font-weight: 700;
         font-size: 19px;
         top: -2px;
     }
 
-    .ProductCard-small #price>#oldPrice {
+    .ProductCard.small #price>#oldPrice {
         font-size: 16px;
         line-height: 24px;
     }
 
-    .ProductCard-big #price>#oldPrice {
+    .ProductCard.big #price>#oldPrice {
         font-size: 18px;
         line-height: 28px;
     }
